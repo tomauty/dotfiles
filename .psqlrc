@@ -1,0 +1,20 @@
+-- psqlrc stuff!
+
+-- dont make noises when loading psqlrc
+\set ECHO none
+
+-- use vim for editing functions
+\set EDITOR /usr/bin/vim
+
+-- change formatting of 'null'
+\pset null 'NULL'
+
+-- enable timing report
+\timing
+
+-- prompt customization
+\set PROMPT1 '(%n@%M:%>) [%/] > '
+\set PROMPT2 ''
+
+-- unicode just in case
+\encoding unicode
