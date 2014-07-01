@@ -11,7 +11,7 @@ ZSH_THEME="edvardm"
 DISABLE_AUTO_TITLE="false"
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(git tmux brew)
+plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,6 +58,7 @@ alias clock='tty-clock -c -t -C 1'
 alias gem='sudo gem'
 alias rainbow='toilet --filter gay'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias tmux='tmux -2'
 
 # Private aliases not committed
 if [ -f ~/dotfiles/.zshrc.private ]; then
@@ -84,14 +85,17 @@ heading () {
   done
 }
 
-# Preferred editor for local and remote sessions
-
 ####################
 # RVM boilerplate
 ####################
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+####################
+# tmux
+####################
+if [[ ! $TERM =~ screen ]]; then
+  exec tmux -2
+fi
 
 
 ####################
