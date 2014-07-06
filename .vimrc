@@ -72,13 +72,9 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
 " Colorscheme defaults
 colorscheme base16-default
-"colorscheme gruvbox
 set background=dark
-"let g:gruvbox_termcolors=16
-
 set colorcolumn=100
 " End colorscheme defaults
-
 
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown

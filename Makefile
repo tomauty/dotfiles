@@ -63,6 +63,7 @@ brew:
 	brew install most
 	brew install mp4v2
 	brew install nettle
+	brew install newsbeuter
 	brew install node
 	brew install p11-kit
 	brew install pcre
@@ -107,6 +108,7 @@ cask:
 	brew cask install monolingual
 	brew cask install slate
 	brew cask install steam
+	brew cask install unrarx
 	brew cask install vlc
 
 git:

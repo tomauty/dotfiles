@@ -5,7 +5,7 @@
 ####################
 # (Oh My + ) ZSH Settings
 ####################
-#
+
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="edvardm"
 DISABLE_AUTO_TITLE="false"
@@ -26,7 +26,8 @@ export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 export PATH=/opt/local/bin:$PATH
 export PATH=$HOME/.tmuxifier/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
-export PATH=$PATH:$HOME/.rvm/bin
+export PATH=$HOME/.rvm/bin:$PATH
+export PATH=$HOME/Library/Python/2.7/bin:$PATH
 
 ####################
 # Aliases
@@ -59,6 +60,9 @@ alias gem='sudo gem'
 alias rainbow='toilet --filter gay'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias tmux='tmux -2'
+alias et='vim ~/.tmux.conf'
+alias kt='killall tmux'
+alias ev='vim ~/.vimrc'
 
 # Private aliases not committed
 if [ -f ~/dotfiles/.zshrc.private ]; then
@@ -86,11 +90,6 @@ heading () {
 }
 
 ####################
-# RVM boilerplate
-####################
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-####################
 # tmux
 ####################
 if [[ ! $TERM =~ screen ]]; then
@@ -99,10 +98,12 @@ fi
 
 
 ####################
-# gruvbox palette
+# Misc.
 ####################
 
 # Uncomment if using the gruvbox iterm2 schemes
 # ~/dotfiles/gruvbox.sh
 
+# Enable vi-mode for command editing
+bindkey -v #
 
