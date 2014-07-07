@@ -48,6 +48,10 @@ vmap <F2> :w !pbcopy<CR><CR>
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 nmap <Leader>rc :e ~/.vimrc<CR><C-l>
 nmap <Leader>n :NERDTree<CR><C-l>
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 
 " NERDTree Config
 autocmd VimEnter * wincmd p

@@ -111,6 +111,10 @@ cask:
 	brew cask install unrarx
 	brew cask install vlc
 
+fonts:
+	brew tap caskroom/fonts
+	brew cask install font-inconsolata
+
 git:
 	git config --global user.name "tomauty"
 	git config --global user.email "tomauty@umich.edu"

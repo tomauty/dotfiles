@@ -42,6 +42,8 @@ alias ez='vim ~/.zshrc'
 alias gap='git add -p'
 alias git-visual='git log --graph --full-history --all --pretty=format:'%h%x09%d%x20%s''
 alias gs='git status'
+alias gb='git branch'
+alias gg='git g'
 
 # mpd etc
 alias mpd='mpd ~/.mpd.conf'
