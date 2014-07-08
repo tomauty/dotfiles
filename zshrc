@@ -96,12 +96,14 @@ heading () {
 alias tmux='tmux -2'
 alias et='vim ~/.tmux.conf'
 alias kt='killall tmux'
+export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/tmux-layouts"
 
 if [[ ! $TERM =~ screen ]]; then
   exec tmux -2
 fi
 
 eval "$(tmuxifier init -)"
+#tmuxifier load-session work
 
 ####################
 # Misc.
@@ -111,5 +113,5 @@ eval "$(tmuxifier init -)"
 # ~/dotfiles/gruvbox.sh
 
 # Enable vi-mode for command editing
-bindkey -v #
+bindkey -v
 
