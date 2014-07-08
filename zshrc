@@ -34,34 +34,36 @@ export PATH=$HOME/Library/Python/2.7/bin:$PATH
 ####################
 
 # ZSH-related aliases
-alias ohmyzsh='vim ~/.oh-my-zsh'
-alias sz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
+alias ohmyzsh='vim ~/.oh-my-zsh'
 
 # Git aliases
 alias gap='git add -p'
-alias git-visual='git log --graph --full-history --all --pretty=format:'%h%x09%d%x20%s''
-alias gs='git status'
 alias gb='git branch'
 alias gg='git g'
+alias git-visual='git log --graph --full-history --all --pretty=format:'%h%x09%d%x20%s''
+alias gs='git status'
 
-# mpd etc
+# mpd
 alias mpd='mpd ~/.mpd.conf'
 alias nc='ncmpcpp'
 
+# vim
+alias ev='vim ~/.vimrc'
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
 # ls
-alias ls='ls -a -h -o -l -G'
 alias cls='clear ; ls'
+alias ls='ls -a -h -o -l -G'
 
 # Misc.
-alias OSXey='clear && OSXey -c'
 alias c='clear'
 alias clearlogs='sudo rm /var/log/asl/*.asl'
 alias clock='tty-clock -c -t -C 1'
 alias gem='sudo gem'
 alias rainbow='toilet --filter gay'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias ev='vim ~/.vimrc'
+alias OSXey='clear && OSXey -c'
 
 # Private aliases not committed
 if [ -f ~/dotfiles/zshrc.private ]; then

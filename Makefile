@@ -166,3 +166,8 @@ python:
 	sudo pip install mercurial
 	sudo pip install psutil
 
+misc:
+	[ -d ~/.tmp-osxey ] || mkdir -p ~/.tmp-osxey && \
+		cd ~/.tmp-osxey && git clone https://github.com/Gary00/OSXey && \
+		cd OSXey && sh install.sh && \
+		cd ~ && rm -rf ~/.tmp-osxey
