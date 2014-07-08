@@ -7,14 +7,14 @@
 ####################
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="edvardm"
+ZSH_THEME="obraun"
 DISABLE_AUTO_TITLE="false"
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(git brew)
+# omzsh plugins
+plugins=(git brew history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-
 export PSQL_EDITOR='vim'
 export EDITOR='vim'
 
@@ -57,6 +57,9 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias cls='clear ; ls'
 alias ls='ls -a -h -o -l -G'
 
+# gzip
+alias gunzip='gzip -d -v'
+
 # Misc.
 alias c='clear'
 alias clearlogs='sudo rm /var/log/asl/*.asl'
@@ -84,6 +87,7 @@ function box(){
   echo "$c $1 $c";
   echo ${t//?/$c};
 }
+
 heading () {
   for i
     do clear ; hr ; figlet $i ; hr
@@ -104,7 +108,6 @@ if [[ ! $TERM =~ screen ]]; then
 fi
 
 eval "$(tmuxifier init -)"
-#tmuxifier load-session work
 
 ####################
 # Misc.
