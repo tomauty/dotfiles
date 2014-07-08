@@ -61,9 +61,6 @@ alias clock='tty-clock -c -t -C 1'
 alias gem='sudo gem'
 alias rainbow='toilet --filter gay'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias tmux='tmux -2'
-alias et='vim ~/.tmux.conf'
-alias kt='killall tmux'
 alias ev='vim ~/.vimrc'
 
 # Private aliases not committed
@@ -94,6 +91,10 @@ heading () {
 ####################
 # tmux
 ####################
+alias tmux='tmux -2'
+alias et='vim ~/.tmux.conf'
+alias kt='killall tmux'
+
 if [[ ! $TERM =~ screen ]]; then
   exec tmux -2
 fi
