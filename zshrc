@@ -64,8 +64,8 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias ev='vim ~/.vimrc'
 
 # Private aliases not committed
-if [ -f ~/dotfiles/.zshrc.private ]; then
-    source ~/dotfiles/.zshrc.private
+if [ -f ~/dotfiles/zshrc.private ]; then
+    source ~/dotfiles/zshrc.private
 else
   print "Skipped private aliases"
 fi
@@ -99,6 +99,7 @@ if [[ ! $TERM =~ screen ]]; then
   exec tmux -2
 fi
 
+eval "$(tmuxifier init -)"
 
 ####################
 # Misc.
