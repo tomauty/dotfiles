@@ -93,9 +93,10 @@ heading () {
 ####################
 # tmux
 ####################
-alias tmux='tmux -2'
 alias et='vim ~/.tmux.conf'
 alias kt='killall tmux'
+alias lt='tmuxifier load-session'
+alias tmux='tmux -2'
 export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/tmux-layouts"
 
 if [[ ! $TERM =~ screen ]]; then
