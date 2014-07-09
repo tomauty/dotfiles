@@ -129,16 +129,11 @@ git:
 npm:
 	sudo npm -g install bower
 	sudo npm -g install coffee-script
-	sudo npm -g install connect
-	sudo npm -g install ctype
-	sudo npm -g install express
-	sudo npm -g install globule
 	sudo npm -g install grunt
 	sudo npm -g install grunt-cli
 	sudo npm -g install grunt-contrib-coffee
 	sudo npm -g install jade
 	sudo npm -g install jshint
-	sudo npm -g install jsonlint
 	sudo npm -g install karma
 	sudo npm -g install karma-chrome-launcher
 	sudo npm -g install karma-coffee-preprocessor
@@ -149,16 +144,12 @@ npm:
 	sudo npm -g install karma-phantomjs-launcher
 	sudo npm -g install karma-requirejs
 	sudo npm -g install karma-script-launcher
-	sudo npm -g install lodash
 	sudo npm -g install mocha
 	sudo npm -g install node-gyp
 	sudo npm -g install node-protobuf
-	sudo npm -g install pg
 	sudo npm -g install protractor
-	sudo npm -g install requirejs
 	sudo npm -g install rethinkdb
 	sudo npm -g install supervisor
-	sudo npm -g install testem
 	sudo npm -g install yo
 
 python:
