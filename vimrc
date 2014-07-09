@@ -77,6 +77,9 @@ let g:mapleader = ","
 " NERDTree shortcut
 nmap <Leader>n :NERDTree<CR><C-l>
 
+" Fast saving
+nmap <leader>w :w!<cr>
+
 """"""""""""""""""""
 " Colors
 """"""""""""""""""""
@@ -99,9 +102,6 @@ set backspace=indent,eol,start
 " C-style indentation. Indents according to C-standard
 set cindent
 
-" Hitting <Tab> in INSERT will add some spaces
-set expandtab
-
 " Searches become case-sensitive if you add capital letters to the search
 set ignorecase
 set smartcase
@@ -119,6 +119,12 @@ set listchars=tab:▸\ ,trail:▫
 " Background color on current cursor line
 set cursorline
 
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" For regular expressions turn magic on
+set magic
+
 " Don't highlight search after <CR>
 set nohlsearch
 
@@ -131,14 +137,11 @@ set number
 " 5 line scrolling margin at top or bottom of screen
 set scrolloff=5
 
-" 2 space tab in normal mode
-set shiftwidth=2
-
-" Tab uses spaces
-set softtabstop=2
-
-" Tab counts for 2 columns
-set tabstop=2
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 " Un-highlight shortcut if highlighting is enabled
 nnoremap <silent> <C-l> :nohl<CR><C-l>
@@ -157,6 +160,49 @@ if has("gui_running")
     " Ensure colorcolumn displays in correct color
     highlight ColorColumn guibg=#333333
 endif
+
+""""""""""""""""""""
+" Tabs/Buffers/Lines
+""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 2 spaces
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" Linebreak on 200 characters
+set lbr
+set tw=200
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
+" Remember info about open buffers on close
+set viminfo^=%
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Toggle paste mode on and off
+map <leader>pp :setlocal paste!<cr>
 
 """"""""""""""""""""
 " Files + Backups
