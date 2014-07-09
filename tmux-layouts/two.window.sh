@@ -8,10 +8,13 @@ new_window "Develop"
 
 # Split window into panes.
 
+run_cmd "npm run supervise"
 split_h 50    # split in half
 
 select_pane 0     # split left pane vertically
 split_v 50
+select_pane 1
+run_cmd "grunt"
 
 # Set active pane.
 select_pane 0
