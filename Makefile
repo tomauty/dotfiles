@@ -61,6 +61,7 @@ brew:
 	brew install mad
 	brew install mercurial
 	brew install most
+	brew install mpc
 	brew install mpd --with-lame
 	brew install mp4v2
 	brew install nettle
