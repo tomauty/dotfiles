@@ -7,7 +7,7 @@
 ####################
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="obraun"
+ZSH_THEME="kafeitu"
 DISABLE_AUTO_TITLE="false"
 HIST_STAMPS="dd.mm.yyyy"
 
@@ -52,6 +52,7 @@ alias nc='ncmpcpp'
 # vim
 alias ev='vim ~/.vimrc'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias v='vim'
 
 # ls
 alias cls='clear ; ls'
@@ -67,6 +68,7 @@ alias clock='tty-clock -c -t -C 1'
 alias gem='sudo gem'
 alias rainbow='toilet --filter gay'
 alias OSXey='clear && OSXey -c'
+alias w='cd ~/Work/app'
 
 # Private aliases not committed
 if [ -f ~/dotfiles/zshrc.private ]; then

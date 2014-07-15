@@ -77,8 +77,11 @@ let g:mapleader = ","
 " NERDTree shortcut
 nmap <Leader>n :NERDTree<CR><C-l>
 
-" Fast saving
+" Fast saving / closing
 nmap <leader>w :w!<cr>
+nmap <Leader>q :q!<CR>
+nmap <Leader>x :x<CR>
+
 
 """"""""""""""""""""
 " Colors
@@ -181,7 +184,7 @@ set tw=200
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+set nowrap "Wrap lines
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -189,7 +192,7 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 
-" Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
@@ -203,6 +206,7 @@ map 0 ^
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+
 
 """"""""""""""""""""
 " Files + Backups

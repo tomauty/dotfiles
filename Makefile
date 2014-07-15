@@ -63,10 +63,8 @@ brew:
 	brew install most
 	brew install mpd --with-lame
 	brew install mp4v2
-	brew install ncmpcpp
 	brew install nettle
 	brew install newsbeuter
-	brew install node
 	brew install p11-kit
 	brew install pcre
 	brew install phantomjs
@@ -98,6 +96,7 @@ brew:
 	brew tap homebrew/dupes
 	brew install ncurses
 	brew link --force ncurses
+	brew install ncmpcpp -v --HEAD
 
 cask:
 	brew cask install a-slower-speed-of-light
