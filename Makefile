@@ -98,6 +98,8 @@ brew:
 	brew install ncurses
 	brew link --force ncurses
 	brew install ncmpcpp -v --HEAD
+	brew tap peco/peco
+	brew install peco
 
 cask:
 	brew cask install a-slower-speed-of-light

@@ -1,3 +1,5 @@
+set rtp+=/usr/local/go/misc/vim
+
 """"""""""""""""""""
 " Vundle
 """"""""""""""""""""
@@ -226,3 +228,7 @@ autocmd BufRead,BufNewFile *.md set spell
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+" only run JSHint on file write
+let JSHintUpdateWriteOnly=1
+
+au BufRead,BufNewFile *.go set filetype=go

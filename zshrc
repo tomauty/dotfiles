@@ -28,6 +28,7 @@ export PATH=$HOME/.tmuxifier/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
+export PATH=$PATH:$GOPATH/bin
 
 ####################
 # Aliases
@@ -69,6 +70,9 @@ alias gem='sudo gem'
 alias rainbow='toilet --filter gay'
 alias OSXey='clear && OSXey -c'
 alias w='cd ~/Work/app'
+alias news='newsbeuter'
+alias feeds='vim ~/.newsbeuter/urls'
+alias newsconfig='vim ~/.newsbeuter/config'
 
 # Private aliases not committed
 if [ -f ~/dotfiles/zshrc.private ]; then
