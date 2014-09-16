@@ -70,8 +70,10 @@ alias gem='sudo gem'
 alias rainbow='toilet --filter gay'
 alias OSXey='clear && OSXey -c'
 alias w='cd ~/Work/app'
-alias news='newsbeuter'
+
+# RSS
 alias feeds='vim ~/.newsbeuter/urls'
+alias news='newsbeuter -q'
 alias newsconfig='vim ~/.newsbeuter/config'
 
 # Private aliases not committed

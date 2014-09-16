@@ -4,11 +4,12 @@ set rtp+=/usr/local/go/misc/vim
 " Vundle
 """"""""""""""""""""
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
+call vundle#end()
 
 
 """"""""""""""""""""
@@ -47,15 +48,8 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " AngularJS handler for syntastic until it's supported properly
 let g:syntastic_html_tidy_ignore_errors=["lacks value", " proprietary attribute",
   \ "unescaped &", "trimming empty", "not recognized", "unexpected",
-  \ "escaping malformed"]
+  \ "escaping malformed", "<body> elements", "implicit", "missing </ul>"]
 
-
-""""""""""""""""""""
-" Powerline
-""""""""""""""""""""
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme = 'base16'
 
 """"""""""""""""""""
 " General
@@ -91,8 +85,23 @@ nmap <Leader>x :x<CR>
 " Enable syntax highlighting
 syntax enable
 
-colorscheme base16-default
+if $TERM == "xterm-256color" || $TERM == "screen-256color"
+  set t_Co=256
+endif
+
+" gruvbox
+let g:gruvbox_italic=0
+
+" seoul256 (dark):
+" range:   233 (darkest) ~ 239 (lightest)
+" default: 237
+let g:seoul256_background = 233
+
+" bg
 set background=dark
+
+" color scheme
+colorscheme base16-default
 
 " Grey line at 100 characters
 set colorcolumn=100
@@ -232,3 +241,24 @@ inoremap kj <Esc>
 let JSHintUpdateWriteOnly=1
 
 au BufRead,BufNewFile *.go set filetype=go
+set mouse=nicr
+set mouse=a
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
+
+
+""""""""""""""""""""
+" Fugitive mappings
+""""""""""""""""""""
+map <leader>gs :Gstatus<cr>
+map <leader>ge :Gedit<cr>
+map <leader>gc :Gcommit<cr>
+map <leader>gg :Ggrep
+autocmd QuickFixCmdPost *grep* cwindow
+
+
+""""""""""""""""""""
+" Airline
+""""""""""""""""""""
+let g:airline_powerline_fonts = 1
