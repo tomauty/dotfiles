@@ -92,16 +92,11 @@ endif
 " gruvbox
 let g:gruvbox_italic=0
 
-" seoul256 (dark):
-" range:   233 (darkest) ~ 239 (lightest)
-" default: 237
-let g:seoul256_background = 233
-
 " bg
 set background=dark
 
 " color scheme
-colorscheme base16-default
+colorscheme gruvbox
 
 " Grey line at 100 characters
 set colorcolumn=100
@@ -173,6 +168,13 @@ if has("gui_running")
 
     " Ensure colorcolumn displays in correct color
     highlight ColorColumn guibg=#333333
+
+    " Nice font!
+    set guifont=Inconsolata\ for\ Powerline:h12
+
+    " I need to have eyes in 5 years
+    set linespace=3
+
 endif
 
 """"""""""""""""""""
