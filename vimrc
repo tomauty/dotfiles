@@ -16,15 +16,15 @@ call vundle#end()
 " NERDTree
 """"""""""""""""""""
 autocmd VimEnter * wincmd p
-let NERDTreeShowLineNumbers=0
-let NERDTreeShowBookmarks=0
 let NERDTreeChDirMode=0
-let NERDTreeQuitOnOpen=0
-let NERDTreeMouseMode=2
-let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr', '\.DS_Store']
-let NERDTreeWinSize=30
-
+let NERDTreeMouseMode=2
+let NERDTreeQuitOnOpen=0
+let NERDTreeShowBookmarks=0
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=0
+let NERDTreeWinPos="right"
+let NERDTreeWinSize=25
 
 """"""""""""""""""""
 " Ctrl-P
@@ -96,10 +96,10 @@ let g:gruvbox_italic=0
 set background=dark
 
 " color scheme
-colorscheme gruvbox
+colorscheme hybrid
 
-" Grey line at 100 characters
-set colorcolumn=100
+" seoul256 (dark):
+let g:seoul256_background = 234
 
 
 """"""""""""""""""""
@@ -151,6 +151,8 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
 
 " Un-highlight shortcut if highlighting is enabled
 nnoremap <silent> <C-l> :nohl<CR><C-l>
@@ -166,16 +168,10 @@ if has("gui_running")
     " Hide GUI tabs
     set guioptions-=e
 
-    " Ensure colorcolumn displays in correct color
-    highlight ColorColumn guibg=#333333
-
-    " Nice font!
-    set guifont=Inconsolata\ for\ Powerline:h12
-
-    " I need to have eyes in 5 years
-    set linespace=3
 
 endif
+
+
 
 """"""""""""""""""""
 " Tabs/Buffers/Lines
@@ -204,6 +200,8 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
+map <leader>t. :tabnext<cr>
+map <leader>t, :tabprevious<cr>
 
 " Return to last edit position when opening files
 autocmd BufReadPost *
@@ -240,14 +238,15 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 
 " only run JSHint on file write
-let JSHintUpdateWriteOnly=1
+let JSHintUpdateWriteOnly=0
 
 au BufRead,BufNewFile *.go set filetype=go
 set mouse=nicr
 set mouse=a
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
 
 
 """"""""""""""""""""
@@ -260,7 +259,51 @@ map <leader>gg :Ggrep
 autocmd QuickFixCmdPost *grep* cwindow
 
 
+set linespace=3
 """"""""""""""""""""
 " Airline
 """"""""""""""""""""
-let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" old vim-powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+"let g:airline_symbols.space = \ua0
+set guifont=Essential\ PragmataPro:h12
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+set fillchars="."
+
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
