@@ -96,7 +96,7 @@ let g:gruvbox_italic=0
 set background=dark
 
 " color scheme
-colorscheme hybrid
+colorscheme base16-twilight
 
 " seoul256 (dark):
 let g:seoul256_background = 234
@@ -289,16 +289,20 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-" old vim-powerline symbols
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
+"" old vim-powerline symbols
+"let g:airline_left_sep = '⮀'
+"let g:airline_left_alt_sep = '⮁'
+"let g:airline_right_sep = '⮂'
+"let g:airline_right_alt_sep = '⮃'
+"let g:airline_symbols.branch = '⭠'
+"let g:airline_symbols.readonly = '⭤'
+"let g:airline_symbols.linenr = '⭡'
 "let g:airline_symbols.space = \ua0
-set guifont=Essential\ PragmataPro:h12
+
+set guifont=Inconsolata\ for\ Powerline:h12
+set linespace=2
+
+let g:airline_theme="tomorrow"
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
