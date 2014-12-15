@@ -23,8 +23,12 @@ let NERDTreeQuitOnOpen=0
 let NERDTreeShowBookmarks=0
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=0
-let NERDTreeWinPos="right"
+let NERDTreeWinPos="left"
 let NERDTreeWinSize=25
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=0
+let NERDTreeAutoDeleteBuffer=1
+
 
 """"""""""""""""""""
 " Ctrl-P
@@ -96,7 +100,6 @@ let g:gruvbox_italic=0
 set background=dark
 
 " color scheme
-colorscheme base16-twilight
 
 " seoul256 (dark):
 let g:seoul256_background = 234
@@ -167,10 +170,7 @@ if has("gui_running")
 
     " Hide GUI tabs
     set guioptions-=e
-
-
 endif
-
 
 
 """"""""""""""""""""
@@ -266,43 +266,27 @@ set linespace=3
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
+
+" symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-"" old vim-powerline symbols
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
-"let g:airline_symbols.branch = '⭠'
-"let g:airline_symbols.readonly = '⭤'
-"let g:airline_symbols.linenr = '⭡'
-"let g:airline_symbols.space = \ua0
-
-set guifont=Inconsolata\ for\ Powerline:h12
-set linespace=2
+"set guifont=Fantasque\ Sans\ Mono:h12
+"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h10
+set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h12
+set linespace=3
 
 let g:airline_theme="tomorrow"
+colorscheme hybrid
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -311,3 +295,6 @@ set fillchars="."
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
+
+let g:indent_guides_exclude_filetypes = ['nerdtree']
+set titlestring=☯
