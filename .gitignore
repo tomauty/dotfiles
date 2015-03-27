@@ -1,4 +1,5 @@
 *.private
 *.gpg
 *.pyo
-ranger/history
+ranger/.config/ranger/history
+ranger/.config/ranger/bookmarks
