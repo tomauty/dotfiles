@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source $(dirname $0)/config
+  echo "%{F$COLOR_ICON}%{F-} $(date +'%a,%b%e / %I:%M %P')"
+
+

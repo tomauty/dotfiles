@@ -1,0 +1,342 @@
+# $Id: mutt.color,v 1.2 2003/09/17 13:06:10 dope Exp dope $
+#
+# If your terminal supports color, you can spice up Mutt by creating your own
+# color scheme. To define the color of an object (type of information), you
+# must specify both a foreground color and a background color (it is not
+# possible to only specify one or the other).
+#
+#
+# object can be one of:
+#   * attachment
+#   * body              (match regexp in the body of messages)
+#   * bold              (hiliting bold patterns in the body of messages)
+#   * error             (error messages printed by Mutt)
+#   * header            (match regexp in the message header)
+#   * hdrdefault        (default color of the message header in the pager)
+#   * index             (match pattern in the message index)
+#   * indicator         (arrow or bar used to indicate the current item in a menu)
+#   * markers           (the '+' markers at the beginning of wrapped lines in the pager)
+#   * message           (informational messages)
+#   * normal            (normal (not quoted) text
+#   * quoted            (text matching $quote_regexp in the body of a message)
+#   * quoted1, quotedN  (higher levels of quoting)
+#   * search            (hiliting of words in the pager)
+#   * signature
+#   * status            (mode lines used to display info about the mailbox or message)
+#   * tilde             (the '~' used to pad blank lines in the pager)
+#   * tree              (thread tree drawn in the message index and attachment menu)
+#   * underline         (hiliting underlined patterns in the body of messages)
+#
+#
+# foreground and background can be one of the following:
+#   * white
+#   * black
+#   * green
+#   * magenta
+#   * blue
+#   * cyan
+#   * yellow
+#   * red
+#   * default
+# foreground can optionally be prefixed with the keyword bright to make the
+# foreground color boldfaced (e.g., brightred).
+#
+# NOTE: ** The last matching rule wins! **
+  color normal  default default
+# arrow or bar used to indicate the current item in a menu
+  color indicator  white                red
+# mode lines used to display info about the mailbox or message
+  color status     brightwhite          blue
+# thread tree drawn in the message index and attachment menu
+  color tree       red                  default
+# the ``~'' used to pad blank lines in the pager
+  color tilde      brightblue           default
+# /* no comment */
+  color attachment white                default
+# hiliting bold patterns in the body of messages
+  color bold       white                default
+# error messages printed by Mutt
+  color error      brightred            black
+# the ``+'' markers at the beginning of wrapped lines in the pager
+  color markers    white                red
+# informational messages
+  color message    brightyellow         black
+# hiliting of words in the pager
+  color search   white                  brightblue
+
+# Mutt sucks .. anyway .. ;)
+# "General" index-colors
+color header     red                 default     .  # all (x-)header
+color index      blue                black      ~Q  # those I have already replied to.
+color index      blue                default    ~D  # deleted
+color index      blue                default    ~O  # old
+color index      brightblue          default    ~P  # mail from myself
+color index      brightblue          yellow     ~T  # tagged
+color index      brightmagenta       default    ~F  # flagged
+color index      brightyellow        blue       ~v  # collapsed thread
+color index      magenta             black      ~k  # GPG
+color index      red                 default    ~N  # new
+
+# spam diagnostics: alerts in red...
+color header    red   default   "^X-Spam.*"
+color header    red   default   "^X-SB.*"
+color header    red   default   "^X-Razor.*"
+color header    red   default   "^X-Pyzor.*"
+color header    red   default   "^X-DCC-.*:.*Fuz1=many Fuz2=many"
+color   header    red     default   "^X-MailScanner-Spamcheck:.spam"
+#color  header    black   red   "^'X-Spam-Flag: YES' ! '^X-Spam-Status: .*RAZOR2_CHECK'"
+# ...harmless headers in normal green again
+color header    green   default   "^X-Spam-Status: No"
+color header    green   default   "^X-Spam-Checker-Version:"
+color header    green   default   "^X-Spam-Level: [^*]"
+color header    green   default   "^X-SpamBouncer:"
+color header    green   default   "^X-SBClass: OK"
+color header    green   default   "^X-SBPass:"
+color header    green   default   "^X-SBNote:"
+color header    green   default   "^X-Pyzor: Reported 0 times."
+
+# Mails to myself
+  color index      black               yellow   '~t strcat@gmx.net'
+# Mails to:/cc: zsh-{users,workers}
+  color index      black               green     '(~C @zsh.org) | (~C @zsh.org)'
+# Mails to:/cc> CRUX Mailing List
+  color index      yellow              default   '(~C crux@fukt.bth.se) | (~C crux@fukt.bth.se)'
+# <http://linuxpackages.net/>
+  color index      black               blue      '~i @linuxpackages.net'
+# mutt-ng
+  color index      black               magenta   '~C mutt-users"''
+# My blog <http://www.strcat.de/blog/>
+  color index      black               cyan      '~t blog@strcat.de'
+# Gentoo
+  color index      red                 white     '~s gentoo-user-de'
+# <http://wmi.berlios.de>
+  color index      brightgreen black     '(~f @lists.debian.org) | (~C @lists.debian.org)'
+# VIM
+  color index      brightgreen         black     '(~t *@vim.org) | (~c *@vim.org)'
+# Mails from localhost (postmaster, MAILDAEMON, ..)
+  color index      white               default    '~i painless.local'
+# BuHa-Security Board
+  color index      blue                black      '~i *@www.buha.info'
+# <http://www.donnerwetter.de/>
+  color index      black               white      '(~f tmux-users@*) | (~C tmux-users@*)'
+# CCs from Usenet
+# Note: My fqdn 'bofh.my-fqdn.de' is for "usenet-only". I use 'painless.my-fqdn.de' for mails.
+  color index    brightmagenta default "(~h 'in-reply-to:.*@bofh.my-fqdn.de) | (~x bofh.my-fqdn.de)"
+  color index    brightmagenta default '~h X-Newsgroups:'
+# Yes. I support some FAQs
+  color index    black         red     '~s faq'
+# Asciidoc
+  color index    black         blue     '~t asciidoc@googlegroups.com'
+# When the Subject indicates a reply (with ":re")
+# then there *must* be a reference to the previous message!
+# So if there is neither an In-Reply-To nor a References line
+# then it must have been sent with a crappy mailer....
+  color index    yellow        magenta "~s re: ! ~x . ! ~h 'in-reply-to: '"
+# misc@openbsd.org
+  color index  green black  '~e owner-misc*'
+# ports@openbsd.org
+  color index white blue  '~e owner-ports*'
+#         ____  ____   _    __  __
+#  __/\__/ ___||  _ \ / \  |  \/  |_/\__
+#  \    /\___ \| |_) / _ \ | |\/| \    /
+#  /_  _\ ___) |  __/ ___ \| |  | /_  _\
+#    \/  |____/|_| /_/   \_\_|  |_| \/
+#
+# Note: The result is like Kmail. *very* slow! :>
+#color index     green                  magenta         "X-Mailer: [0-9][A-Z0-9]*.[A-Z0-9]*.[.0-9A-Za-z]*$"
+#color index     white                  magenta         '~C Undisclosed.*Recipients'
+#color index     magenta                black           '! ~p ~f @(aol\|hotmail\|msn\|prodigy)\.(com)'
+#color index     magenta                black           '~f @(aol\|hotmail\|msn\|prodigy\)\.(com\|net)'
+#color index     magenta                black           '! ~p ~f @compulink.nlrs.com'
+#color index     magenta                black           '! ~p ~f free'
+#color index     magenta                black           '! ~p ~f funtime'
+#color index     magenta                black           '! ~p ~f worldnet.att.net'
+#color index     green                  black           "! ~i @"
+#color index     green                  black           "! ~i <"
+#color index     green                  black           "~i <>"
+#color index     green                  black           "~i @>"
+#color index     green                  black           "! ~i @.+[.].+>"
+#color index     green                  black           "~i [.]>"
+#color index     green                  black           "~i '<.* .*>'"
+#color index     green                  black           "~i <.*<"
+#color index     green                  black           "~i [.][a-z]>"
+#color index     black                  black           "! ~b ."
+#color index     white                  magenta         "! ~s ."
+#color index     white                  magenta         "~s '\\$[0-9]+[0-9]+'"
+#color index     blue                   magenta         '~s "ad(v)?:"'
+#color index     blue                   magenta         '~s "adv\.[ ]"'
+#color index     blue                   magenta         '~s "To help your business succeed"'
+#color index     blue                   magenta         '~s "Have You Heard of Age Reversal"'
+#color index     blue                   magenta         '~s "Analyst.s Pick"'
+#color index     blue                   magenta         '~s "LOW risk, HIGH yield"'
+#color index     blue                   magenta         '~s "123 Inkjets"'
+#color index     blue                   magenta         '~s "150 FREE Business Cards"'
+#color index     blue                   magenta         '~s "Register to win your Dream Vacation"'
+#color index     blue                   magenta         '~s "Free Pics"'
+#color index     blue                   magenta         '~s "Mortgage For 30 Yr. Fixed Term"'
+#color index     blue                   magenta         '~s "TARGETED EMAIL ADDRESSES"'
+#color index     blue                   magenta         '~s "INCREASE PORTFOLIO VALUE"'
+#color index     blue                   magenta         '~s "Congratulations, You Won"'
+#color index     blue                   magenta         '~s "RAPID EXPANSION"'
+#color index     blue                   magenta         '~s "Take Control of Your Financial Security"'
+#color index     blue                   magenta         '~s "Work at Home . Make Great Money"'
+#color index     blue                   magenta         '~s "Get.*!"'
+#color index     blue                   magenta         '~s "URGENT"'
+#color index     blue                   magenta         '~s "=\\?(big5|iso-2022|koi8-r|ks_c_5601)"'
+#color index     blue                   magenta         '~s "windows-125[1234]"'
+#color index      brightyellow           default         '~h "Microsoft Outlook"'
+#color index     blue                   magenta         "~h 'Return-Path.*\.tw\>'"
+
+color quoted     magenta    default
+color quoted1    yellow                 default
+color quoted2    red                    default
+color quoted3    brightred              default
+color quoted4    yellow                 default
+color quoted5    cyan                   default
+color quoted6    green                  default
+color quoted7    brightcyan             default
+color quoted8    brightgreen            default
+color signature  blue     default
+color underline  blue                   default
+mono  normal     none
+mono  attachment bold
+mono  bold       bold
+mono  error      standout
+mono  indicator  reverse
+mono  markers    bold
+mono  message    bold
+mono  status     underline
+mono  tree       none
+
+# My name. I'm important ;)
+  color body       red                    default         "[Cc]hristian [Ss]chneider"
+# URLs
+  color body       blue                   white           "(gopher|finger|ftp|http|telnet)://[^ >]*"
+  color body       blue                   default         "news:[^ \">\t\r\n]*"
+# HTTP addresses
+  color body       yellow                 blue            "[[:alnum:]][-+.#_[:alnum:]]*@[-+.[:alnum:]]*[[:alnum:]]"
+# HTTPS addresses
+  color body       blue                   default         "https://[^ >]*"
+# (ftp|web) address without "http"
+  color body       blue                   white           "(ftp|www)\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
+#  <URL:http://strcat.neessen.net/>
+  color body       brightcyan             default         "<URL:[^ ]*>"
+# Mailto links with a optional subject line i. e.
+# 'mailto:strcat@gmx.net?subject=i+love+you
+  color body       brightred              black           "mailto: *[^ ]+\(\\?subject=[^ ]+\)?"
+# File names i. e. '/path/file'
+  color body       brightgreen            black           "\\~?\(/[-_.,a-zA-Z0-9{}äöüß]+\)+"
+# Path names i. e. '/path/'
+  color body       brightred              black           "\(/[-_.a-zA-Z0-9]+\)+/"
+# Variables  i. e. '$LOGNAME' or '$0'
+  color body       green                  black           "\\$[a-zA-Z][-_a-zA-Z]+"
+  color body       green                  black           "\\$[0-9]+[.,0-9]*"
+# Attribution line (i. e. '* Username wrote:')
+  color body       red                    black           "^[*] .*:$"
+# SCREAMING IN CAPS
+  color body       brightyellow           black           "\\<[-A-ZÖÜßÄ']{4,}\\>"
+# Smilies ;)
+# Above is split into 5 parts:
+#  [ \t]          -> Must start with a space or tab. (some pastings of command
+#                    line promts have ":/" in them.
+#  >?             -> An optional ">" - A frown.
+#  [;:]           -> The eyes
+#  [-=]?          -> optional nose.
+#  [PpD)/(|}{><]  -> different mouths.
+# color body brightyellow black "[ \t]>?[;:][-=]?[PpD)/(|}{><]"
+#
+# Note the intentional [], which isn't a [] at all. To put a ']' in a
+# character list, the ']' must be the first character listed. To match a '-',
+# put it first or last.
+# color body brightyellow black "(^|[ \t])>?[;:8=][-^]?[][PpD)/(|}{><]"
+#  color body      black                  yellow          "[;:]-[)/(|]"
+  color body       brightyellow           black          "(^|[[:space:]]+)[;:=]-*[)/(<pPoDOQ]+($|[[:space:]]+)"
+#  color body       brightyellow black                    "([*]?[{}><]?[;:][-=o^]?[][)(*><|DPpd\\/][)(]?)"
+#  color body       brightyellow black                    "([{}]?[8][-=o^][)(><|DPpd\\/][)(]?)"
+#  color body       brightyellow black                    "([)(]?[><|\\/(][-=o^]?[8;:][{}]?)"
+# more interesting words
+  color  body       brightmagenta         black           "Artistic License"
+  color  body       brightmagenta         black           "BSD License"
+  color  body       brightmagenta         black           "GNU (Lesser )?General Public License"
+  color  body       brightmagenta         black           "L?GPL"
+  color  body       brightmagenta         black           "MIT/X Consortium License"
+  color  body       brightmagenta         black           "OSI Approved"
+  color  body       brightmagenta         black           "Public Domain"
+  color  body       red                   black           "Free Software"
+  color  body       red                   black           "Open Source"
+  color  body       red                   black           "[sS]lashdot"
+  color  body       red                   black           "[nN]ews[fF]orge"
+  color  body       red                   black           "[sS]ource[fF]orge"
+# Border lines.
+  color body cyan black "( *[-+=#*~_]){6,}"
+# *Emphasized*, /emphasized/, -strike-throut- and _emphasized_ words
+#  TODO: Fix the regex for '-strike-through-'.
+  color body       yellow                 blue            "[*][-[:alnum:]]+[*]"                 # *bold*
+  color body       yellow                 blue            "[*][-[:alnum:]]+ *[-[:alnum:]]+[*]"  # *really bold*
+  color body       yellow                 blue            "/[-[:alnum:]]+/"                     # /emphasized/
+#  color body      yellow                 blue            "[-]+[-[[:alnum:]]+[-]{1}"            # -strike-through-
+  color body       yellow                 blue            "_[-[:alnum:]]+_"                     # _underline_
+
+# '*g*' is /Default/ but Doomy writes '<g>' .. never mind .. i'm flexible <g>.. aehm.. *g*
+  color body       brightblue             white           "<[Gg]>"
+  color body       brightblue             white           "<[Bb][Gg]>"
+  color body       brightblue             white           "<[fF][Gg]>"
+  color body       brightblue             white           "<[eE][Gg]>"
+# '$ dict B1FF' all right???!!!11!
+  color body       red                    white           "[!?]{3,}"
+# some acronyms
+  color body       black                  brightyellow    "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
+# Make MONEY!!!11!
+# *lol* murphys on tour and his law is right waiting for you.
+# Original attribution-line from a mail:
+# > "On Sat, Sep 06, 2003 at 11:08:22PM +0200, Mark wrote:"
+# and now take a quick look at this ==>   ^^^^^^^^^
+# You see? ;) shit happens and that doesn't interest me.
+  color body       black                  yellow          "[0-9]+[,.][0-9]* *pf/min"
+  color body       black                  yellow          "(dm|euro?|\$\$\$) *[1-9][0-9]*([.,][0-9]*-?-?)?"
+  color body       black                  yellow          "[1-9][0-9.,]*(--?|[0-9][0-9])? *(dm|euro?|mark|\$\$\$)"
+  color body       black                  yellow          "[1-9][0-9]? *(cents?|pfennig)"
+# Highlight a hint to manpage a lá 'command(1)' (i. e. "ls(1)") .. capable of
+# being extended.
+# Note: Use the second regex to resolve 'login.conf(5)', 'mount_null(8)',
+#       'pkg-config(1)' and 'pop(3)d'.
+#  color body      black                  red             "[[:alpha:]]+\\([0-9]\\)"
+  color body       black                  red             "[[:alpha:]]+[-_.]?[[:alpha:]]+\\([0-9]\\)?"
+# copyright, registered, trademark: (c), (r), [tm]
+  color body       brightyellow           black           "([(](c|r)[)]|\\[tm\\])"
+# "<li>..</li>"
+  color body       brightred              black           "^ *[-*] +"
+# local network's
+  color body       brightblack            blue            "192.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}"
+# highlight the most used OS' in different colors
+  color body       blue                   yellow          "(freebsd|netbsd|openbsd|solaris|gentoo)"
+  color body       blue                   default         "[Ww]in(do(ze|dows|of)|zigweich)"
+  color body       white                  red             "(linux *)?(debian|mandrake|slackware|redhat|suse) *(linux)? *[0-9][.][0-9]"
+  color body       blue                   default         "[Ww]indows[- ]?(3[.]11|95|98|9x|[Nn][Tt]|2k|2000|[Mm][Ee]|[Xx][Pp])"
+# S N A F U
+#  color body       white                  red             '\<\w( +\w\>)+'
+# Color the attribution-line in order of the quoted lines.
+color body       brightblue     default "^[^>].*(wrote|writes|said|says|schrieb|schreibt|schrub|\
+schreibselte|tippte|meinte|teilte folgendes mit|escreveu|escribió|scripsit|[0-9]+\\]|\\.[a-z]{2,4}>).*:"
+color body       brightred       default "^>[^>].*(wrote|writes|said|says|schrieb|schreibt|schrub|\
+schreibselte|tippte|meinte|teilte folgendes mit|escreveu|escribió|scripsit|[0-9]+\\]|\\.[a-z]{2,4}>).*:"
+color body       brightmagenta   default "^>[ ]?>[^>].*(wrote|writes|said|says|schrieb|schreibt|schrub|\
+schreibselte|tippte|meinte|teilte folgendes mit|escreveu|escribió|scripsit|[0-9]+\\]|\\.[a-z]{2,4}>).*:"
+# GPG / PGP / t-prot (<http://www.escape.de/users/tolot/mutt/>)
+  color body       green                  black           "^#v[+-]"
+  color body       brightmagenta          black           "^\\[---.*"
+  color body       brightmagenta          black           "^gpg:.*"
+  color body       brightblack            yellow          "-----END PGP PUBLIC KEY BLOCK-----"
+  color body       brightblack            yellow          "-----BEGIN PGP PUBLIC KEY BLOCK-----"
+  color body       black                  yellow          "Version: GnuPG v1.[01].[67].*"
+# [ first | second | third ]
+  color body       brightyellow           brightred       <'\[ [-a-z ]+ (\| [-a-z ]+)+ \]'
+# <http://www.donnerwetter.de/>
+  color body       magenta                default         "(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Sonnabend|Samstag|Sonntag)"
+  color body       white                  red             "Weitere Aussichten"
+  color body       black                  red             "DONNERWETTER - Vorhersage fuer die Region Regensburg"
+# Colors for my { daily,weekly,monthly,yearly}-filebackup
+#  | 'etc-files-2003-09-15.gz'
+  color body       red                    black           "(etc-files-|home-files-|errors-|logfile-)+[0-9,-.gz]*"
+  color body       black                  red             "Backup - Report for painless"
+

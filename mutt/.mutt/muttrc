@@ -1,0 +1,88 @@
+#            _   _
+#  _ __ _  _| |_| |_
+# | '  \ || |  _|  _|
+# |_|_|_\_,_|\__|\__|
+#
+
+#-------~---~----------~----------~----
+# Colors
+#-------~---~----------~----------~----
+source "~/.mutt/colors/solarized-256.muttrc"
+
+
+#-------~---~----------~----------~----
+# Account Management
+#-------~---~----------~----------~----
+source ~/.mutt/accounts/personal
+
+set spoolfile = "+Personal/INBOX"
+
+folder-hook Personal/* source ~/.mutt/accounts/personal
+folder-hook Work/* source ~/.mutt/accounts/work
+
+macro index ,p '<change-folder> =Personal/INBOX<enter>' 'Go to Personal Mail'
+macro index ,w '<change-folder> =Work/INBOX<enter>' 'Go to Work Mail'
+
+# Try to render as text first, only HTML if no text encoding available
+
+#-------~---~----------~----------~----
+# IMAP Settings
+#-------~---~----------~----------~----
+set imap_keepalive = 300
+set mail_check     = 20
+set imap_check_subscribed
+
+
+#-------~---~----------~----------~----
+# Browsing / Composing
+#-------~---~----------~----------~----
+set sort            = "threads"
+set strict_threads  = "yes"
+set sort_browser    = "reverse-date"
+set sort_aux        = "last-date-received"
+set text_flowed     = "yes"
+
+unset collapse_unread
+
+bind index - collapse-thread
+bind index _ collapse-all
+
+set index_format="%?M?+& ?%2M %2e %Z %D %-20.20F (%4c) %s"
+set pager_index_lines = 20
+
+alternative_order text/plain text/html
+
+
+#-------~---~----------~----------~----
+# Sidebar Config
+#-------~---~----------~----------~----
+set sidebar_width         = 30
+set sidebar_visible       = yes
+set sidebar_delim         = '|'
+set sidebar_newmail_only  = no # only show folders with new mail
+
+bind index \cp sidebar-prev
+bind index \cn sidebar-next
+bind index \co sidebar-open
+bind index G imap-fetch-mail
+
+
+#-------~---~----------~----------~----
+# Various Settings
+#-------~---~----------~----------~----
+bind pager <down> next-line
+bind pager <up> previous-line
+
+macro index y '<change-folder>?<toggle-mailboxes>
+macro pager \cU 'urlview' 'Follow links with urlview'
+
+set confirmappend     = "no"
+set delete            = "yes"
+set followup_to       = "yes"
+set header_cache      = "~/.cache/mutt"
+set message_cachedir  = "~/.cache/mutt"
+set sleep_time        = 0
+set wait_key          = "no"
+
+set smart_wrap
+unset metoo

@@ -1,0 +1,90 @@
+Sync All
+Create Both
+Expunge Both
+
+IMAPAccount Personal
+Host imap.gmail.com
+User tom.auty@gmail.com
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+PassCmd "gpg --batch --yes --quiet --no-tty --decrypt ~/.mutt/auth/.msmtp-work.gpg"
+
+IMAPStore Personal-remote
+Account Personal
+
+MaildirStore Personal-local
+Path ~/Mail/Personal/
+Inbox ~/Mail/Personal/INBOX
+
+Channel Personal-inbox
+Master ":Personal-remote:INBOX"
+Slave ":Personal-local:INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Personal-archive
+Master ":Personal-remote:[Gmail]/All Mail"
+Slave ":Personal-local:archive"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Personal-sent
+Master ":Personal-remote:[Gmail]/Sent Mail"
+Slave ":Personal-local:sent"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Personal-drafts
+Master ":Personal-remote:[Gmail]/Drafts"
+Slave ":Personal-local:drafts"
+Create Both
+Expunge Both
+SyncState *
+
+
+IMAPAccount Work
+Host imap.gmail.com
+User tom@docnetwork.org
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+PassCmd "gpg --batch --yes --quiet --no-tty --decrypt ~/.mutt/auth/.msmtp-work.gpg"
+
+
+IMAPStore Work-remote
+Account Work
+
+MaildirStore Work-local
+Path ~/Mail/Work/
+Inbox ~/Mail/Work/INBOX
+
+Channel Work-inbox
+Master ":Work-remote:INBOX"
+Slave ":Work-local:INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Work-archive
+Master ":Work-remote:[Gmail]/All Mail"
+Slave ":Work-local:archive"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Work-sent
+Master ":Work-remote:[Gmail]/Sent Mail"
+Slave ":Work-local:sent"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Work-drafts
+Master ":Work-remote:[Gmail]/Drafts"
+Slave ":Work-local:drafts"
+Create Both
+Expunge Both
+SyncState *
+

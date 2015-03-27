@@ -1,0 +1,54 @@
+#!/bin/sh
+
+source $(dirname $0)/config
+
+while read -r line ; do
+    case $line in
+        S*)
+            sys_infos="%{r}${line#?}"
+            ;;
+        T*)
+          # Ghost logo
+          #title=" %{F$COLOR_ICON}  %{F-} $(uname -n)"
+
+          # Arch logo
+          title=" %{F$COLOR_ICON}  %{F-} $(whoami) @ $(uname -n)"
+
+          # Circle logo
+          #title=" %{F$COLOR_ICON}  %{F-} $(whoami) @ $(uname -n)"
+            ;;
+        W*)
+            wm_infos="%{c}"
+            IFS=':'
+            set -- ${line#?}
+            while [ $# -gt 0 ] ; do
+                item=$1
+                name=${item#?}
+                case $item in
+                    [OFU]*)
+                        # active desktop
+                        wm_infos="$wm_infos %{U$COLOR_ACTIVE}%{+u}  %{-u}"
+                        ;;
+                    o*)
+                        # inactive but occupied desktop
+                        wm_infos="$wm_infos %{U$COLOR_OCCUPIED}%{+u}  %{-u}"
+                        ;;
+                    f*)
+                        # inactive desktop
+                        wm_infos="$wm_infos   "
+                        ;;
+                    u*)
+                        # urgent desktop
+                        wm_infos="$wm_infos %{U$COLOR_URGENT}%{+u}  %{-u}"
+                        ;;
+                    L*)
+                        wm_infos="$wm_infos $layout"
+                        ;;
+                esac
+                shift
+            done
+            ;;
+    esac
+    printf "%s\n" "$title$wm_infos$sys_infos"
+done
+

@@ -1,0 +1,21 @@
+-- Be quiet during loading of this file
+\set ECHO none
+\set QUIET 1
+
+-- Better null display
+\pset null '[NULL]'
+
+-- Display timing after each command
+\timing
+
+\set PROMPT1 '%[%033[31;5m%]%x%[%033[0m%]%[%033[31;1m%]%n%[%033[33;1m%]@%[%033[32;1m%m%[%033[0m%] %[%033[37;1m%]%/%[%033[0m%] %`date +"%H:%M:%S"`% > '
+\set PROMPT2 '> '
+
+-- Use best available output format
+\x auto
+\set VERBOSITY verbose
+\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTCONTROL ignoredups
+\set COMP_KEYWORD_CASE upper
+\unset QUIET
+

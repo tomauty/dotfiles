@@ -1,0 +1,19 @@
+#!/bin/sh
+
+SCREENWIDTH=$(bspc query -T -m | head -n 1 | awk -F"+" '{print $1}' | awk -F"x" '{print $1}')
+SCREENHEIGHT=$(bspc query -T -m | head -n 1 | awk -F"+" '{print $1}' | awk -F"x" '{print $2}')
+
+EDGEWIDTH=50
+DMENUWIDTH=$SCREENWIDTH
+
+XPOS=0
+YPOS=15
+#YPOS=$(($(($SCREENHEIGHT / 2)) - 15))
+
+FGSELECT="#9B703F"
+BGSELECT="#7587A6"
+FG="#999999"
+BG="#1E1E1E"
+FONT="-*-Lemon-*-*-*-*-*-*-*-*-*-*-*-*"
+
+dmenu_run -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $BG -nf $FG -sb $BGSELECT -p "?"

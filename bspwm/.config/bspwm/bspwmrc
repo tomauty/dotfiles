@@ -1,0 +1,45 @@
+#! /bin/sh
+
+getXresColor() {
+echo -n "$( xrdb -query | grep "\*\.$1:" | grep -oE "#[a-zA-Z0-9]{6}" | cut -c 2- )";
+}
+
+# Visual options
+bspc config top_padding         10
+bspc config border_width        1
+bspc config window_gap          20
+bspc config split_ratio         0.5
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config focus_follows_pointer true
+bspc config auto_alternate true
+bspc config auto_cancel true
+bspc config normal_border_color "#323537"
+bspc config active_border_color "#838184"
+bspc config focused_border_color "#979797"
+bspc config presel_border_color "#9a875f"
+bspc config urgent_border_color "#9f7155"
+bspc config focused_locked_border_color "#9a875f"
+bspc config normal_frame_opacity 0.0
+bspc config focused_frame_opacity 0.1
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
+i=1
+for monitor in $(bspc query -M); do
+  if [ $i -eq 0 ]; then
+    bspc monitor $monitor \
+      -n "$i" \
+      -d $i/{i,ii,iii,iv,v}
+  else
+    bspc monitor $monitor \
+      -n "$1" \
+      -d $1/{vi,vii,viii,ix,x}
+  fi
+  let i++
+done
+NMON=$i
+unset i
+
+
+ ${HOME}/.config/bspwm/panel/panel

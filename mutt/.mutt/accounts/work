@@ -1,0 +1,16 @@
+set from      = "tom@docnetwork.org"
+set sendmail  = "/usr/bin/msmtp -a work"
+set mbox      = "+Work/archive"
+set postponed = "+Work/drafts"
+
+color status cyan default
+
+macro index D \
+    "<save-message>+Work/Trash<enter>" \
+    "move message to the trash"
+
+macro index S \
+    "<save-message>+Work/Spam<enter>"  \
+        "mark message as spam"
+
+mailboxes "+-- Work ----------" =Work/INBOX =Work/archive =Work/drafts =Work/sent

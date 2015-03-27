@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source $(dirname $0)/config
+if [ ! -z "$(mpc current)" ]; then
+  status="" # Paused
+  if [ ! -z "$(mpc | grep '\[playing\]')" ]; then
+    status="" # Playing"
+  fi
+  echo "%{F$COLOR_ICON}$status%{F-} $(mpc current)"
+fi
+

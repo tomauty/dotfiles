@@ -1,0 +1,12 @@
+short_units yes
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 2
+update_interval_on_battery 4
+#${execi 1 ./panel_temperature}
+
+TEXT
+S${execi 1 ./panel_mail}  ${execi 1 ./panel_mpd}  ${execi 1 ./panel_wifi} ${wireless_essid wlp3s0b1}   ${execi 1 ./panel_battery}${battery_percent}   ${execi 1 ./panel_time} %{-u}
+

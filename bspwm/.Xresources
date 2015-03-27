@@ -1,0 +1,33 @@
+# __ ___ _ ___ ___ ___ _  _ _ _ __ ___ ___
+# \ \ / '_/ -_|_-</ _ \ || | '_/ _/ -_|_-<
+# /_\_\_| \___/__/\___/\_,_|_| \__\___/__/
+
+#include "/home/tom/.colors/gruvbox-dark"
+
+urxvt*perl-lib:			      /usr/lib/urxvt/perl
+urxvt*perl-ext-common:		default,matcher,clipboard
+urxvt*perl-matcher: 		  1
+urxvt*matcher-button: 		3
+urxvt*url-launcher:		    /usr/bin/dwb
+urxvt*cursorUnderline:    0
+urxvt*letterspace:        -5
+urxvt*cursorBlink:		    true
+urxvt*scrollBar:		      false
+urxvt*depth:			        32
+urxvt*internalBorder: 		5
+urxvt*dynamicColors:      on
+urxvt.urgentOnBell:       true
+
+URxvt*font:               xft:terminus:hinting=true:pixelsize=14:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=14:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=14:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=14:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+
+Xft.antialias:            1
+Xft.autohint:             1
+Xft.dpi:                  96
+Xft.hinting:              1
+Xft.hintstyle:            hintfull
+Xft.lcdfilter:            lcddefault
+Xft.rgba:                 rgb
+

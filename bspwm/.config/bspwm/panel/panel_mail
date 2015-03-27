@@ -1,0 +1,14 @@
+#!/bin/bash
+source $(dirname $0)/config
+PERSONAL=$(ls "/home/tom/Mail/Personal/INBOX/new" | wc -l)
+WORK=$(ls ~/Mail/Work/INBOX/new | wc -l )
+TOTAL=`expr $PERSONAL + $WORK`
+
+icon=""
+
+if [ ! "$TOTAL" = "0" ]; then
+  icon=""
+fi
+echo "%{F$COLOR_ICON}$icon%{F-} $TOTAL"
+
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#
+# Just a simple script to copy a music directory to # ~/Music.
+# Used this to make selectively restoring music from my backup easier.
+#
+
+if [ -z "$1" ] ; then
+  echo "No directory specified!"
+  exit 1
+fi
+
+if [ ! -d "$(pwd)/$1" ]; then
+  echo "Directory $1 does not exist"
+  exit 1
+fi
+
+dir="$(pwd)/$1"
+dest="/home/tom/Music"
+
+echo "COPYING :: $dir"
+mv "$dir" $dest
+
+echo "UPDATING MPD..."
+mpc update
+
+exit 0
+

@@ -1,0 +1,30 @@
+#! /bin/sh
+
+cd $(dirname $0)
+source $(dirname $0)/config
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+    printf "%s\n" "The panel is already running." >&2
+    exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc control --subscribe > "$PANEL_FIFO" &
+echo "T" >  "$PANEL_FIFO" &
+conky -c ./panel_conky > "$PANEL_FIFO" &
+
+cat "$PANEL_FIFO" \
+  | ./panel_bar \
+  | bar \
+    -f "$FONT1","$FONT2","$FONT3"\
+    -F "$COLOR_FOREGROUND"\
+    -B "$COLOR_BACKGROUND"\
+    -g "$PANEL_GEOMETRY"\
+    -u $LINEHEIGHT &
+sleep 10
+wait
+
