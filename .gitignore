@@ -1,3 +1,4 @@
 *.private
 *.gpg
 *.pyo
+ranger/history
