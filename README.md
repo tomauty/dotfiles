@@ -14,3 +14,6 @@ Managed with GNU Stow
 "I want to remove Tom's ZSH settings."
 
 `stow -D zsh`
+
+#####Screenshot (3/27/2015)
+![Screenshot](http://i.imgur.com/d5Xms4G.png)
