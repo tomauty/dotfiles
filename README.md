@@ -3,7 +3,7 @@
 Managed with GNU Stow
 
 #####Basic Use
-`stow` will create symlinks in the parent of the indicated directory. So if you run `stow bspwm` at `~/dotfiles`, it will symlink the structure inside of the `~/dotfiles/bspwm` folder in `~`.
+`stow` will create symlinks in the parent of `cwd`. So if you run `stow bspwm` in `~/dotfiles`, it will symlink the structure inside of the `~/dotfiles/bspwm` folder in `~`.
 
 #####Examples
 "I want to install Tom's ZSH settings"
