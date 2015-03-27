@@ -7,7 +7,6 @@ fi
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
-export GHI_TOKEN="1ad45dc2921b156393ab900a2ac546c59007446a"
 export PANEL_FIFO="/tmp/panel-fifo"
 export PSQL_EDITOR='vim'
 
