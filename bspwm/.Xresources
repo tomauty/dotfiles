@@ -13,7 +13,7 @@ urxvt*cursorUnderline:    0
 urxvt*letterspace:        -5
 urxvt*cursorBlink:		    true
 urxvt*scrollBar:		      false
-urxvt*depth:			        32
+urxvt*depth:			        0
 urxvt*internalBorder: 		5
 urxvt*dynamicColors:      on
 urxvt.urgentOnBell:       true

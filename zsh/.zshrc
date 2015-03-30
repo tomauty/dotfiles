@@ -39,6 +39,9 @@ alias gap='git add -p'
 alias gb='git branch'
 alias gg='git grep'
 alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+
 
 # mpd / sound
 alias mpd='mpd /home/tom/.mpd.conf'
@@ -65,6 +68,7 @@ alias scat='sudo cat'
 alias svim='sudo vim'
 alias root='sudo su'
 alias reboot='sudo reboot'
+alias mountusb="sudo mount -t hfsplus -o rw,force /dev/sdb2 /mnt/USB"
 
 # pacman-related
 alias pacman="sudo pacman"

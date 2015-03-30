@@ -13,7 +13,7 @@ URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
 
 
-URxvt.depth: 32
+URxvt.depth: 0
 URxvt.saveLines: 12000
 !URxvt.background: [92]#091114
 
