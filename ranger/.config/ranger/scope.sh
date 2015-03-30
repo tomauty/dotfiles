@@ -75,8 +75,8 @@ case "$mimetype" in
         try highlight --out-format=ansi "$path" && { dump | trim; exit 5; } || exit 2;;
     # Ascii-previews of images:
     image/*)
-        img2txt --gamma=0.5 --width="$width" --height="$height" "$path" && exit 4 || exit 1;;
-        #w3m "$path" && exit 4 || exit 1;;
+        #img2txt --gamma=0.5 --width="$width" --height="$height" "$path" && exit 4 || exit 1;;
+        w3m "$path" && exit 4 || exit 1;;
     # Image preview for videos, disabled by default:
     # video/*)
     #     ffmpegthumbnailer -i "$path" -o "$cached" -s 0 && exit 6 || exit 1;;

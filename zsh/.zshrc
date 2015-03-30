@@ -62,6 +62,7 @@ alias ..='cd ..'
 alias df='df -h'
 alias mkdir="mkdir -p"
 alias zip="zip -9 -y -r -q"
+alias nitrogen="nitrogen --sort=alpha"
 
 # privileged access
 alias scat='sudo cat'
