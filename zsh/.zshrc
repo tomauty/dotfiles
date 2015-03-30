@@ -58,6 +58,7 @@ alias r="ranger"
 alias ..='cd ..'
 alias df='df -h'
 alias mkdir="mkdir -p"
+alias zip="zip -9 -y -r -q"
 
 # privileged access
 alias scat='sudo cat'
@@ -67,6 +68,14 @@ alias reboot='sudo reboot'
 
 # pacman-related
 alias pacman="sudo pacman"
+orphans() {
+  if [[ ! -n $(pacman -Qdt) ]]; then
+    echo "No orphans to remove."
+  else
+    sudo pacman -Rns $(pacman -Qdtq)
+  fi
+}
+
 
 # work-related
 alias nrs='npm run supervise'

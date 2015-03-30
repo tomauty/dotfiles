@@ -1,28 +1,5 @@
 #!/bin/sh
 
-# Colors for reference, from base16
-#*.foreground:   base05
-#*.background:   base00
-#*.cursorColor:  base05
-
-#*.color0:       base00
-#*.color1:       base08
-#*.color2:       base0B
-#*.color3:       base0A
-#*.color4:       base0D
-#*.color5:       base0E
-#*.color6:       base0C
-#*.color7:       base05
-
-#*.color8:       base03
-#*.color9:       base09
-#*.color10:      base01
-#*.color11:      base02
-#*.color12:      base04
-#*.color13:      base06
-#*.color14:      base0F
-#*.color15:      base07
-
 #get the value of a color from the current xrdb load configuration
 getXresColor() {
 echo -n "$( xrdb -query | grep "\*$1:" | grep -oE "#[a-zA-Z0-9]{6}" | cut -c 2- )";
@@ -44,7 +21,7 @@ COLOR_URGENT="#FF$(getXresColor color1)"
 LINEHEIGHT="3"
 
 # Panel geometry
-PANEL_HEIGHT=18
+PANEL_HEIGHT=15
 PANEL_WIDTH=''
 PANEL_GAP=8
 PANEL_GEOMETRY="${PANEL_WIDTH}x${PANEL_HEIGHT}+0+0"
@@ -61,7 +38,7 @@ DURATION=1
 MONITOR="$(bspc query -M | tail -n1)"
 
 # W-Fi
-WIFI=wlp3s0b1
+WIFI=wlp3s0
 
 # Volume change clip
 CLIP="/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"

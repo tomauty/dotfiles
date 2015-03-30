@@ -33,6 +33,10 @@ xset fp rehash
 # Fix cursor
 xsetroot -cursor_name left_ptr
 
+# Turn off auto-sleep, it annoys me more than it helps
+xset -dpms
+xset s 0
+
 # Maximize the brightness
 # Also useful so that brightness-up/down steps will max out
 # at maximum brightness
