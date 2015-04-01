@@ -76,9 +76,6 @@ super + !button{1-3}
 super + @button{1-3}
 	bspc pointer -u
 
-alt + shift + o
-  urxvtc -shading 100 -title 'pseudoframe' -name 'pseudoframe' -e sh -c 'tput civis; sleep 365d'
-
 #
 # wm independent hotkeys
 #

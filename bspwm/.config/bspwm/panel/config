@@ -11,7 +11,7 @@ FONT2="-*-dweep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*"
 FONT3="-misc-fixed-medium-r-normal-ja-0-0-75-75-c-0-iso10646-1"
 
 COLOR_BACKGROUND="#ff$(getXresColor background)"
-COLOR_FOREGROUND="#ff$(getXresColor foreground)"
+COLOR_FOREGROUND="#ff$(getXresColor color15)"
 COLOR_ICON="#ff$(getXresColor color4)"
 COLOR_ACTIVE="#ff$(getXresColor color4)"
 COLOR_OCCUPIED="#FF$(getXresColor color8)"
