@@ -4,43 +4,55 @@
 
 #include "/home/tom/.colors/gruvbox-dark"
 
-urxvt*perl-lib:			      /usr/lib/urxvt/perl
-urxvt*perl-ext-common:		default,matcher,clipboard
-urxvt*perl-matcher: 		  1
-urxvt*matcher-button: 		3
-urxvt*url-launcher:		    /usr/bin/dwb
+urxvt*perl-lib:           /usr/lib/urxvt/perl
+urxvt*perl-ext-common:    default,matcher,clipboard
+urxvt*perl-matcher:       1
+urxvt*matcher-button:     3
+urxvt*url-launcher:       /usr/bin/dwb
 urxvt*cursorUnderline:    0
 urxvt*letterspace:        -5
-urxvt*cursorBlink:		    true
-urxvt*scrollBar:		      false
-urxvt*depth:			        0
-urxvt*internalBorder: 		5
+urxvt*cursorBlink:        true
+urxvt*scrollBar:          false
+urxvt*depth:              0
+urxvt*internalBorder:     5
 urxvt*dynamicColors:      on
 urxvt.urgentOnBell:       true
 
 ! Dweep
-!URxvt*font:            -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldFont:        -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*italicFont:      -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldItalicFont:  -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font:              -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldFont:          -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*italicFont:        -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldItalicFont:    -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
 
 ! Lemon
-!URxvt*font:             -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
-!URxvt*boldFont:         -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
-!URxvt*italicFont:       -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
-!URxvt*boldItalicFont:   -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
+!URxvt*font:              -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
+!URxvt*boldFont:          -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
+!URxvt*italicFont:        -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
+!URxvt*boldItalicFont:    -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
+
+! Gohufont
+!URxvt*font:               -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-1
+!URxvt*boldFont:           -*-gohufont-bold-*-*-*-11-*-*-*-*-*-iso10646-1
+!URxvt*italicFont:         -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-1
+!URxvt*boldItalicFont:     -*-gohufont-bold-*-*-*-11-*-*-*-*-*-iso10646-1
 
 ! Fixed
-!URxvt*font:            -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-!URxvt*boldFont:        -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-!URxvt*italicFont:      -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-!URxvt*boldItalicFont:  -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+URxvt*font:              -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+URxvt*boldFont:          -misc-fixed-bold-r-semicondensed--13-120-75-75-c-60-iso10646-1
+URxvt*italicFont:        -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+URxvt*boldItalicFont:    -misc-fixed-bold-r-semicondensed--13-120-75-75-c-60-iso10646-1
 
 ! ProFont
-!URxvt*font:           -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
-!URxvt*boldFont:       -*-profont-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*italicFont:     -*-profont-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldItalicFont: -*-profont-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font:              -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
+!URxvt*boldFont:          -*-profont-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*italicFont:        -*-profont-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldItalicFont:    -*-profont-*-*-*-*-*-*-*-*-*-*-*-*
+
+! Tamsyn
+!URxvt*font:               -*-tamsyn-medium-r-normal-*-12-*-*-*-*-*-iso8859-1
+!URxvt*boldFont:           -*-tamsyn-bold-r-normal-*-12-*-*-*-*-*-iso8859-1
+!URxvt*italicFont:         -*-tamsyn-medium-r-normal-*-12-*-*-*-*-*-iso8859-1
+!URxvt*boldItalicFont:     -*-tamsyn-bold-r-normal-*-12-*-*-*-*-*-iso8859-1
 
 ! Termsyn
 !URxvt*font:              -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*
@@ -48,14 +60,11 @@ urxvt.urgentOnBell:       true
 !URxvt*italicFont:        -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*-*
 !URxvt*boldItalicFont:    -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
 
-! Tamsyn
-!URxvt*font: -*-Tamsynmod-medium-r-normal-*-*-*-*-*-*-*-*-*
-
 ! Terminus
-URxvt*font:               xft:terminus:hinting=true:pixelsize=12:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
-URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
-URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
-URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+!URxvt*font:               xft:terminus:hinting=true:pixelsize=12:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
+!URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+!URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+!URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 
 Xft.antialias:            1
 Xft.autohint:             1
