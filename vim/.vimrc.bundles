@@ -60,5 +60,4 @@ Bundle 'wookiehangover/jshint.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'godlygeek/csapprox'
-Bundle 'farseer90718/vim-taskwarrior'
 
