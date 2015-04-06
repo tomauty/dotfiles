@@ -204,6 +204,7 @@ let NERDTreeDirArrows=1
 let NERDTreeAutoDeleteBuffer=1
 nmap <Leader>n :NERDTreeToggle<CR><C-l>
 let g:indent_guides_exclude_filetypes = ['nerdtree']
+hi Directory ctermfg=blue
 
 
 "-------~---~----------~----------~----
@@ -226,5 +227,5 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-let g:airline_theme="base16"
+let g:airline_theme="gruvbox"
 

@@ -1,2 +1,2 @@
 #!/bin/bash
-xrandr --output DisplayPort-0 --auto --left-of LVDS
+xrandr --output DisplayPort-1 --auto --left-of LVDS

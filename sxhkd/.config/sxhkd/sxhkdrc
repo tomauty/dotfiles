@@ -64,6 +64,10 @@ super + ctrl + {1-9}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,window -d} ^{1-9,10}
 
+# Change window gap
+super + {minus,equal}
+  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
+
 ~button1
 	bspc pointer -g focus
 

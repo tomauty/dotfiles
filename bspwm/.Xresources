@@ -37,10 +37,10 @@ urxvt.urgentOnBell:       true
 !URxvt*boldItalicFont:     -*-gohufont-bold-*-*-*-11-*-*-*-*-*-iso10646-1
 
 ! Fixed
-URxvt*font:              -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-URxvt*boldFont:          -misc-fixed-bold-r-semicondensed--13-120-75-75-c-60-iso10646-1
-URxvt*italicFont:        -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
-URxvt*boldItalicFont:    -misc-fixed-bold-r-semicondensed--13-120-75-75-c-60-iso10646-1
+!URxvt*font:              -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+!URxvt*boldFont:          -misc-fixed-bold-r-semicondensed--13-120-75-75-c-60-iso10646-1
+!URxvt*italicFont:        -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+!URxvt*boldItalicFont:    -misc-fixed-bold-r-semicondensed--13-120-75-75-c-60-iso10646-1
 
 ! ProFont
 !URxvt*font:              -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
@@ -65,6 +65,12 @@ URxvt*boldItalicFont:    -misc-fixed-bold-r-semicondensed--13-120-75-75-c-60-iso
 !URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+!
+! Terminus-small
+URxvt*font:               xft:terminus:hinting=true:pixelsize=9:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 
 Xft.antialias:            1
 Xft.autohint:             1
