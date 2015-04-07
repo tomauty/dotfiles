@@ -74,12 +74,12 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color"
   set t_Co=256
 endif
 
-let g:gruvbox_italic=0
-let g:gruvbox_termcolors=16
-set background=dark
-let g:gruvbox_contrast_dark="hard"
+"let g:gruvbox_italic=0
+"let g:gruvbox_termcolors=16
+"let g:gruvbox_contrast_dark="hard"
 
-colorscheme gruvbox
+colorscheme base16-default
+set background=dark
 
 
 "-------~---~----------~----------~----
@@ -227,5 +227,5 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-let g:airline_theme="gruvbox"
+let g:airline_theme="base16"
 

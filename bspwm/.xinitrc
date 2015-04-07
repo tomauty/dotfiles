@@ -15,6 +15,7 @@ xrandr --output DisplayPort-1 --auto --right-of LVDS
 /usr/bin/xcalib -d :0 /usr/share/color/icc/Mac.icc
 
 # Start MPD
+[[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble &
 /usr/bin/mpd /home/tom/.mpd.conf
 
 # Load up colors
@@ -42,8 +43,9 @@ xset s 0
 # at maximum brightness
 ./max_brightness
 
+urxvtd -q -o -f
 # Set background, compton, bspwm keybindings and bspwm itself
 nitrogen --restore &
-compton &
+#compton &
 sxhkd &
 exec bspwm -c /home/tom/.config/bspwm/bspwmrc

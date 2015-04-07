@@ -1,0 +1,3 @@
+colorscheme tomorrow
+noremap j 10j
+noremap k 10k
