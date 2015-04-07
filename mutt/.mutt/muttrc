@@ -50,7 +50,9 @@ bind index _ collapse-all
 set index_format="%?M?+& ?%2M %2e %Z %D %-20.20F (%4c) %s"
 set pager_index_lines = 20
 
-alternative_order text/plain text/html
+#alternative_order text/plain text/html
+#alternative_order text/plain text/enriched text/html     # save html for last
+#set display_filter="sed -e '/^\[-- Autoview using \.\j* --\]$/d'"
 
 
 #-------~---~----------~----------~----
@@ -83,6 +85,8 @@ set header_cache      = "~/.cache/mutt"
 set message_cachedir  = "~/.cache/mutt"
 set sleep_time        = 0
 set wait_key          = "no"
+
+auto_view text/html
 
 set smart_wrap
 unset metoo

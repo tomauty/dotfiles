@@ -1,5 +1,0 @@
-# Open images (scaled) in feh
-image/*;/usr/bin/feh --scale '%s'; test=test -n "$DISPLAY"
-
-# View HTML via w3m
-text/html; w3m -I %{charset} -T text/html; copiousoutput;

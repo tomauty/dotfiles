@@ -1,0 +1,13 @@
+# Open images (scaled) in feh
+image/*;/usr/bin/feh --scale '%s'; test=test -n "$DISPLAY"
+
+# View HTML via w3m
+#text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/html; w3m -dump -T text/html -cols 70; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+text/htm; w3m -dump -T text/html -cols 70; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+message/html; w3m -dump -T text/html -cols 70; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+message/htm; w3m -dump -T text/html -cols 70; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+#text/html       ; w3m -dump -force_html %s ; copiousoutput
+#text/htm        ; w3m -dump -force_html %s ; copiousoutput
+#message/html    ; w3m -dump -force_html %s ; copiousoutput
+#message/htm     ; w3m -dump -force_html %s ; copiousoutput
