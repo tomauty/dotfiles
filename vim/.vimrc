@@ -229,3 +229,4 @@ let g:airline_symbols.linenr = ''
 
 let g:airline_theme="base16"
 
+set nospell
