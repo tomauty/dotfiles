@@ -90,7 +90,7 @@ orphans() {
 # work-related
 alias nrs='npm run supervise'
 alias w='cd ~/Work/app'
-alias lines="cloc --exclude-dir=node_modules,bower_components,dist,static2 --quiet --unix --skip-uniqueness ."
+alias lines="cloc --exclude-dir=node_modules,bower_components,dist,static2 --quiet --unix --skip-uniqueness "
 
 # tmux
 alias kt='killall tmux'
