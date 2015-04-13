@@ -6,7 +6,7 @@ echo -n "$( xrdb -query | grep "\*\.$1:" | grep -oE "#[a-zA-Z0-9]{6}" | cut -c 2
 
 # Visual options
 bspc config top_padding         15
-bspc config border_width        2
+bspc config border_width        1
 bspc config window_gap          30
 bspc config split_ratio         0.5
 bspc config borderless_monocle true

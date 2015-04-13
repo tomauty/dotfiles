@@ -2,7 +2,7 @@
 ! \ \ / '_/ -_|_-</ _ \ || | '_/ _/ -_|_-<
 ! /_\_\_| \___/__/\___/\_,_|_| \__\___/__/
 
-#include "/home/tom/.colors/base16-twilight.dark"
+#include "/home/tom/.colors/gruvbox-dark"
 
 urxvt*perl-lib:           /usr/lib/urxvt/perl
 urxvt*perl-ext-common:    default,matcher,clipboard
@@ -10,7 +10,6 @@ urxvt*perl-matcher:       1
 urxvt*matcher-button:     1
 urxvt*url-launcher:       /usr/bin/firefox
 urxvt*cursorUnderline:    0
-urxvt*letterspace:        -5
 urxvt*cursorBlink:        true
 urxvt*scrollBar:          false
 urxvt*depth:              0
@@ -24,11 +23,29 @@ urxvt.urgentOnBell:       true
 !URxvt*italicFont:        -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
 !URxvt*boldItalicFont:    -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
 
+! Lokaltog
+!URxvt*font:               -lokaltog-*-medium-r-normal-*-12-*-75-75-*-*-iso10646-*
+!URxvt*boldFont:           -lokaltog-*-bold-r-normal-*-12-*-75-75-*-*-iso10646-*
+!URxvt*italicFont:         -lokaltog-*-medium-r-normal-*-12-*-75-75-*-*-iso10646-*
+!URxvt*boldItalicFont:     -lokaltog-*-bold-r-normal-*-12-*-75-75-*-*-iso10646-*
+
 ! Lemon
 !URxvt*font:              -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
 !URxvt*boldFont:          -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
 !URxvt*italicFont:        -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
 !URxvt*boldItalicFont:    -*-lemon-medium-r-normal-*-10-*-75-75-m-50-iso8859-1
+
+! ProggyClean
+!URxvt*font:               -*-proggyclean-medium-r-normal-*-13-80-96-96-c-70-iso8859-1
+!URxvt*boldFont:           -*-proggyclean-medium-r-normal-*-13-80-96-96-c-70-iso8859-1
+!URxvt*italicFont:         -*-proggyclean-medium-r-normal-*-13-80-96-96-c-70-iso8859-1
+!URxvt*boldItalicFont:     -*-proggyclean-medium-r-normal-*-13-80-96-96-c-70-iso8859-1
+
+! ProggyTiny
+!URxvt*font:               -*-proggytiny-medium-r-normal-*-10-80-96-96-c-60-iso8859-1
+!URxvt*boldFont:           -*-proggytiny-medium-r-normal-*-10-80-96-96-c-60-iso8859-1
+!URxvt*italicFont:         -*-proggytiny-medium-r-normal-*-10-80-96-96-c-60-iso8859-1
+!URxvt*boldItalicFont:     -*-proggytiny-medium-r-normal-*-10-80-96-96-c-60-iso8859-1
 
 ! Gohufont
 !URxvt*font:               -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-1
@@ -36,7 +53,11 @@ urxvt.urgentOnBell:       true
 !URxvt*italicFont:         -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-1
 !URxvt*boldItalicFont:     -*-gohufont-bold-*-*-*-11-*-*-*-*-*-iso10646-1
 
-
+! Creep
+!URxvt*font:               -*-creep-regular-*-normal-*-16-120-100-*-m-0-iso10646-1
+!URxvt*boldFont:           -*-creep-regular-*-normal-*-16-120-100-*-m-0-iso10646-1
+!URxvt*italicFont:         -*-creep-regular-*-normal-*-16-120-100-*-m-0-iso10646-1
+!URxvt*boldItalicFont:     -*-creep-regular-*-normal-*-16-120-100-*-m-0-iso10646-1
 
 ! Fixed
 !URxvt*font:              -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
@@ -63,30 +84,25 @@ urxvt.urgentOnBell:       true
 !URxvt*boldItalicFont:     -*-tamsyn-bold-r-normal-*-12-*-*-*-*-*-iso8859-1
 
 ! Termsyn
-!URxvt*font:              -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldFont:          -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*italicFont:        -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldItalicFont:    -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*font:              -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldfont:          -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicfont:        -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicfont:    -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
 
 ! Terminus
-!URxvt*font:               xft:terminus:hinting=true:pixelsize=12:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
-!URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
-!URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
-!URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*font:               xft:terminus:hinting=true:pixelsize=12:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 
 ! Monaco
 !URxvt*font:               xft:monaco:hinting=true:pixelsize=9:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*boldFont:           xft:monaco:style=bold:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*italicFont:         xft:monaco:style=italic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*boldItalicFont:     xft:monaco:style=bolditalic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
-!
-! Terminus-small
-URxvt*font:               xft:terminus:hinting=true:pixelsize=9:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
-URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
-URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
-URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 
-Xft.antialias:            false
+
+Xft.antialias:            true
 Xft.autohint:             1
 Xft.dpi:                  96
 Xft.hinting:              1

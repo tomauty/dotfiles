@@ -9,13 +9,10 @@ while read -r line ; do
             ;;
         T*)
           # Ghost logo
-          #title=" %{F$COLOR_ICON}  %{F-} $(uname -n)"
+          title=" %{F$COLOR_ICON}  %{F-} $(uname -n)"
 
           # Arch logo
-          title=" %{F$COLOR_ICON}  %{F-} $(whoami) @ $(uname -n)"
-
-          # Circle logo
-          #title=" %{F$COLOR_ICON}  %{F-} $(whoami) @ $(uname -n)"
+          #title=" %{F$COLOR_ICON}  %{F-} $(whoami) @ $(uname -n)"
             ;;
         W*)
             wm_infos="%{c}"

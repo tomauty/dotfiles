@@ -8,9 +8,9 @@ echo -n "$( xrdb -query | grep "\*$1:" | grep -oE "#[a-zA-Z0-9]{6}" | cut -c 2- 
 # Fonts defined in xfontsel (xft not yet supported)
 FONT1="-*-stlarch-medium-r-normal-*-10-100-75-75-c-80-iso10646-1"
 #FONT2="-*-tewi-medium-*-*-*-*-*-*-*-*-*-*-*"
-#FONT2="-*-lemon-medium-*-*-*-10-110-*-*-m-*-*-*"
+FONT2="-*-lemon-medium-*-*-*-10-110-*-*-m-*-*-*"
 #FONT2="-*-creep-*-*-*-*-*-*-*-*-*-*-*-*"
-FONT2="-*-dweep-*-*-*-*-*-*-*-*-*-*-*-*"
+#FONT2="-*-dweep-*-*-*-*-*-*-*-*-*-*-*-*"
 #FONT2="-*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-*"
 #FONT2="-*-creep-*-*-*-*-0-*-*-*-*-*-*-*"
 FONT3="-misc-fixed-medium-r-normal-ja-0-0-75-75-c-0-iso10646-1"
