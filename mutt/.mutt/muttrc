@@ -90,3 +90,6 @@ auto_view text/html
 
 set smart_wrap
 unset metoo
+
+bind index N search-opposite
+bind pager N search-opposite
