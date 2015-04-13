@@ -75,10 +75,10 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color"
 endif
 
 "let g:gruvbox_italic=0
-"let g:gruvbox_termcolors=16
+let g:gruvbox_termcolors=16
 "let g:gruvbox_contrast_dark="hard"
 
-colorscheme base16-default
+colorscheme gruvbox
 set background=dark
 
 

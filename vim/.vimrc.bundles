@@ -59,5 +59,5 @@ Bundle 'gregsexton/MatchTag'
 Bundle 'wookiehangover/jshint.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
-Bundle 'godlygeek/csapprox'
+"Bundle 'godlygeek/csapprox'
 
