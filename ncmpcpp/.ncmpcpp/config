@@ -58,8 +58,8 @@ visualizer_type             = "wave_filled" (spectrum/wave/wave_filled/ellipse)
 alternative_header_first_line_format  = "$7{%t}$9"
 alternative_header_second_line_format = "$5{%a}$9 $0-$9 $8{%b}$9"
 song_columns_list_format              = "(7f)[black]{l} (25)[cyan]{a} (40)[white]{t|f} (30)[blue]{b}"
-#song_list_format                      = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
-song_list_format = "{ $8%a $1» $5}{%t} $R$1%b"
+song_list_format                      = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+#song_list_format = "{ $8%a $1» $5}{%t} $R$1%b"
 song_status_format = "$9%a $1» $2%t $1» $1%b$8 (%y)$1"
 
 #browser_playlist_prefix = "$2playlist$9 "
@@ -78,14 +78,14 @@ song_status_format = "$9%a $1» $2%t $1» $1%b$8 (%y)$1"
 #-------~---~----------~----------~----
 
 autocenter_mode         = "yes"
-browser_display_mode    = "classic" (classic/columns)
+browser_display_mode    = "columns" (classic/columns)
 centered_cursor         = "yes"
 cyclic_scrolling        = "yes"
 default_find_mode       = "wrapped" (wrapped/normal)
 default_space_mode      = "add" (add/select)
 header_visibility       = "no"
 message_delay_time      = "1"
-playlist_display_mode   = "classic" (classic/columns)
+playlist_display_mode   = "columns" (classic/columns)
 #progressbar_look        = "=>="
 progressbar_look        = "── "
 progressbar_boldness    = "no"
@@ -93,7 +93,7 @@ startup_screen          = "playlist"
 #startup_slave_screen    = "visualizer"
 statusbar_visibility    = "no"
 titles_visibility       = "no"
-user_interface          = "classic" (classic/alternative)
+user_interface          = "alternative" (classic/alternative)
 
 ##
 ## Screen numbers you can use after 'sequence' keyword are:
