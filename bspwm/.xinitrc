@@ -47,5 +47,6 @@ urxvtd -q -o -f
 # Set background, compton, bspwm keybindings and bspwm itself
 nitrogen --restore &
 #compton &
+transmission-daemon &
 sxhkd &
 exec bspwm -c /home/tom/.config/bspwm/bspwmrc
