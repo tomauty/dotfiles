@@ -36,6 +36,9 @@ URxvt.url-select.launcher:                      /usr/bin/firefox
 URxvt.url-select.underline:                     true
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
+URxvt*inheritPixmap:    false
+URxvt*transparent:      false
+URxvt*buffered: false
 !------------------------------------------------------------------------------
 ! URxvt Colors
 

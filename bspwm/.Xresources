@@ -18,10 +18,10 @@ urxvt*dynamicColors:      on
 urxvt.urgentOnBell:       true
 
 ! Dweep
-!URxvt*font:              -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldFont:          -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*italicFont:        -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldItalicFont:    -*-dweep-medium-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font:               -jmk-dweep-medium-r-semicondensed-*-11-100-75-75-c-50-iso8859-1
+!URxvt*boldFont:           -jmk-dweep-medium-r-semicondensed-*-11-100-75-75-c-50-iso8859-1
+!URxvt*italicFont:         -jmk-dweep-medium-r-semicondensed-*-11-100-75-75-c-50-iso8859-1
+!URxvt*boldItalicFont:     -jmk-dweep-medium-r-semicondensed-*-11-100-75-75-c-50-iso8859-1
 
 ! Lokaltog
 !URxvt*font:               -lokaltog-*-medium-r-normal-*-12-*-75-75-*-*-iso10646-*
@@ -95,11 +95,23 @@ URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=12:anti
 URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 
+! Xevv-peep
+!URxvt.font:               -zevv-peep-Medium-R-Normal--14-130-75-75-C-70-ISO8859-15
+!URxvt.boldFont:           -zevv-peep-Medium-R-Normal--14-130-75-75-C-70-ISO8859-15
+!URxvt.italicFont:         -zevv-peep-Medium-R-Normal--14-130-75-75-C-70-ISO8859-15
+!URxvt.boldItalicFont:     -zevv-peep-Medium-R-Normal--14-130-75-75-C-70-ISO8859-15
+
 ! Monaco
 !URxvt*font:               xft:monaco:hinting=true:pixelsize=9:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*boldFont:           xft:monaco:style=bold:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*italicFont:         xft:monaco:style=italic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*boldItalicFont:     xft:monaco:style=bolditalic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
+
+! Uushi
+!URxvt*font: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
+!URxvt*boldFont: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
+!URxvt*italicFont: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
+!URxvt*boldItalicFont: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
 
 
 Xft.antialias:            true
@@ -108,5 +120,5 @@ Xft.dpi:                  96
 Xft.hinting:              1
 Xft.hintstyle:            hintfull
 Xft.lcdfilter:            lcddefault
-Xft.rgba:                 rgb
+Xft.rgba:                 none
 

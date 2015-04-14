@@ -43,7 +43,7 @@ xset s 0
 # at maximum brightness
 ./max_brightness
 
-urxvtd -q -o -f
+#urxvtd -q -o -f
 # Set background, compton, bspwm keybindings and bspwm itself
 nitrogen --restore &
 #compton &
