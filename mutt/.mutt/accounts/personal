@@ -3,8 +3,6 @@ set sendmail  = "/usr/bin/msmtp -a personal"
 set mbox      = "+Personal/archive"
 set postponed = "+Personal/drafts"
 
-color status default default
-
 macro index D \
     "<save-message>+Personal/Trash<enter>" \
     "move message to the trash"

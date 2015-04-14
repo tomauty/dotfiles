@@ -7,7 +7,7 @@
 #-------~---~----------~----------~----
 # Colors
 #-------~---~----------~----------~----
-source "~/.mutt/colors/comidia"
+source "~/.mutt/colors/gruvbox-16"
 
 
 #-------~---~----------~----------~----
@@ -47,11 +47,14 @@ unset collapse_unread
 bind index - collapse-thread
 bind index _ collapse-all
 
-set index_format="%?M?+& ?%2M %2e %Z %D %-20.20F (%4c) %s"
-set pager_index_lines = 20
+set date_format="%y-%m-%d %T"
+set index_format="%2C | %Z [%d] %-20.20F (%-4.4c) %s"
+#set pager_index_lines = 20
 
-#alternative_order text/plain text/html
-#alternative_order text/plain text/enriched text/html     # save html for last
+
+# Display recipient in Sent folder
+folder-hook   *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30t (%-4.4c) %s"'
+folder-hook ! *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"'
 #set display_filter="sed -e '/^\[-- Autoview using \.\j* --\]$/d'"
 
 
@@ -59,8 +62,8 @@ set pager_index_lines = 20
 # Sidebar Config
 #-------~---~----------~----------~----
 set sidebar_width         = 30
-set sidebar_visible       = yes
-set sidebar_delim         = '|'
+#set sidebar_visible       = yes
+set sidebar_delim         = '.'
 set sidebar_newmail_only  = no # only show folders with new mail
 
 bind index \cp sidebar-prev
@@ -68,12 +71,17 @@ bind index \cn sidebar-next
 bind index \co sidebar-open
 bind index G imap-fetch-mail
 
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+
 
 #-------~---~----------~----------~----
 # Various Settings
 #-------~---~----------~----------~----
 bind pager <down> next-line
 bind pager <up> previous-line
+bind pager j next-line
+bind pager kk previous-line
 
 macro index y '<change-folder>?<toggle-mailboxes>
 macro pager \cU 'urlview' 'Follow links with urlview'
