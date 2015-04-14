@@ -15,5 +15,5 @@ Managed with GNU Stow
 
 `stow -D zsh`
 
-#####Screenshot (3/27/2015)
-![Screenshot](http://i.imgur.com/d5Xms4G.png)
+#####Screenshot (4/14/2015)
+![Screenshot](http://i.imgur.com/dZclE9h.png)
