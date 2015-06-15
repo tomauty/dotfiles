@@ -54,6 +54,7 @@ alias nc='ncmpcpp'
 alias vol="alsamixer"
 
 # editing / navigation
+#alias vim='nvim'
 alias c='clear'
 alias ev='vim ~/.vimrc'
 alias ez='vim ~/.zshrc'
@@ -134,4 +135,9 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
+export PYTHON=python2.7
+
+export PATH=${PATH}:/usr/lib/jvm/default/bin
 unalias rm >/dev/null 2>/dev/null
+KEYTIMEOUT=1
+export ANDROID_HOME=/opt/android-sdk
