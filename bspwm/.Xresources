@@ -4,18 +4,20 @@
 
 #include "/home/tom/.colors/gruvbox-dark"
 
-urxvt*perl-lib:           /usr/lib/urxvt/perl
-urxvt*perl-ext-common:    default,matcher,clipboard
-urxvt*perl-matcher:       1
-urxvt*matcher-button:     1
-urxvt*url-launcher:       /usr/bin/firefox
-urxvt*cursorUnderline:    0
-urxvt*cursorBlink:        true
-urxvt*scrollBar:          false
-urxvt*depth:              0
-urxvt*internalBorder:     5
-urxvt*dynamicColors:      on
-urxvt.urgentOnBell:       true
+URxvt.perl-lib:           /usr/lib/urxvt/perl
+URxvt.perl-ext-common:    default,matcher,clipboard
+URxvt.perl-matcher:       1
+URxvt.matcher-button:     1
+URxvt.url-launcher:       /usr/bin/firefox
+URxvt.cursorUnderline:    0
+URxvt.cursorBlink:        true
+URxvt.scrollBar:          false
+!URxvt.letterSpace:        -1
+URxvt*lineSpace:          -5
+!URxvt.depth:              16
+URxvt.internalBorder:     5
+URxvt.dynamicColors:      on
+URxvt.urgentOnBell:       true
 
 ! Dweep
 !URxvt*font:               -jmk-dweep-medium-r-semicondensed-*-11-100-75-75-c-50-iso8859-1
@@ -84,10 +86,10 @@ urxvt.urgentOnBell:       true
 !URxvt*boldItalicFont:     -*-tamsyn-bold-r-normal-*-12-*-*-*-*-*-iso8859-1
 
 ! Termsyn
-!urxvt*font:              -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldfont:          -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*italicfont:        -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*bolditalicfont:    -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font:              -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldfont:          -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*italicfont:        -*-termsyn-medium-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*bolditalicfont:    -*-termsyn-bold-*-*-*-*-*-*-*-*-*-*-*-*
 
 ! Terminus
 URxvt*font:               xft:terminus:hinting=true:pixelsize=12:antialias=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
@@ -95,6 +97,18 @@ URxvt*boldFont:           xft:terminus:style=bold:hinting=true:pixelsize=12:anti
 URxvt*italicFont:         xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 
+!URxvt*font:                 -*-dejavu sans mono-medium-r-normal-*-10-0-0-0-m-0-iso10646-1
+!URxvt*boldFont:             -*-dejavu sans mono-bold-r-normal-*-10-0-0-0-m-0-iso10646-1
+!URxvt*italicFont:           -*-dejavu sans mono-medium-o-normal-*-0-0-0-0-m-0-iso10646-1
+!URxvt*boldItalicFont:       -*-dejavu sans mono-bold-o-normal-*-0-0-0-0-m-0-iso10646-1
+!URxvt*font:                 xft:DejaVu Sans Mono-8:antialias=true:hinting=true
+!URxvt*boldFont:             xft:DejaVu Sans Mono-8:bold:antialias=true:hinting=true
+
+!URxvt*font:                 xft:Inconsolata-9:normal
+!URxvt*boldFont:             xft:Inconsolata-9:bold
+
+!URxvt*font:                 xft:Anonymous Pro:pixelsize=12:antialias=true
+!URxvt*boldFont:             xft:Anonymous Pro
 ! Xevv-peep
 !URxvt.font:               -zevv-peep-Medium-R-Normal--14-130-75-75-C-70-ISO8859-15
 !URxvt.boldFont:           -zevv-peep-Medium-R-Normal--14-130-75-75-C-70-ISO8859-15
@@ -107,18 +121,24 @@ URxvt*boldItalicFont:     xft:terminus:style=bolditalic:hinting=true:pixelsize=1
 !URxvt*italicFont:         xft:monaco:style=italic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 !URxvt*boldItalicFont:     xft:monaco:style=bolditalic:hinting=true:pixelsize=9:antialias=false:Inconsolata\ for\ Powerline:pixelsize=12
 
+!URxvt.font:                xft:DejaVu Sans Mono:pixelsize=13
+!URxvt.boldFont:            xft:DejaVu Sans Mono:pixelsize=13:style=Bold
+
+!URxvt.font: xft:M+ 1m:size=9,xft:DejaVu Sans Mono:pixelsize=12:antialias=true
+!URxvt.boldFont: xft:M+ 1m:bold:size=9,xft:DejaVu Sans Mono:pixelsize=12:antialias=true
+
+!URxvt.font: xft:Fantasque Sans Mono:weight=medium:pixelsize=12
+
 ! Uushi
 !URxvt*font: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
 !URxvt*boldFont: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
 !URxvt*italicFont: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
 !URxvt*boldItalicFont: -*-uushi-medium-r-normal-*-11-90-75-75-p-58-iso10646-1
 
-
-Xft.antialias:            true
-Xft.autohint:             1
-Xft.dpi:                  96
-Xft.hinting:              1
-Xft.hintstyle:            hintfull
-Xft.lcdfilter:            lcddefault
-Xft.rgba:                 none
-
+Xft.dpi: 96
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
