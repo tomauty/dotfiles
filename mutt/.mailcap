@@ -1,9 +1,11 @@
-image/*           ; /usr/bin/feh --scale '%s'               ; test=test -n "$DISPLAY"
-image/jpeg;           ; /usr/bin/feh --scale '%s'               ; test=test -n "$DISPLAY"
-image/png;           ; /usr/bin/feh --scale '%s'               ; test=test -n "$DISPLAY"
-application/pdf    ; /usr/bin/zathura %s                     ; copiousoutput
-text/html          ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
-text/htm           ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
-message/html       ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
-message/htm        ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+image/*             ; /usr/bin/feh --scale '%s'               ; test=test -n "$DISPLAY"
+image/jpeg;         ; /usr/bin/feh --scale '%s'               ; test=test -n "$DISPLAY"
+image/png;          ; /usr/bin/feh --scale '%s'               ; test=test -n "$DISPLAY"
+
+application/pdf     ; /usr/bin/zathura %s                     ; copiousoutput
+
+text/html           ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+text/htm            ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+message/html        ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+message/htm         ; w3m -dump -T text/html -cols 70         ; copiousoutput; description=HTML Text; test=type w3m >/dev/null
 
