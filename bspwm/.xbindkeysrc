@@ -25,10 +25,10 @@
 # "command"
 # m:xxx + c:xxx
 # Shift+...
-"notify_volume + 5 ; amixer -M set Master playback 5%+"
+"notify_volume + 5"
    XF86AudioRaiseVolume
 
-"notify_volume - 5 ; amixer -M set Master playback 5%-"
+"notify_volume - 5"
    XF86AudioLowerVolume
 
 "amixer -M set Master toggle"
@@ -40,11 +40,11 @@
 "kbdlight down"
    XF86KbdBrightnessDown
 
-"notify_volume + 5 ; amixer -M set Master playback 5%+"
+"notify_volume + 5"
     m:0x0 + c:96
     F12
 
-"notify_volume - 5 ; amixer -M set Master playback 5%-"
+"notify_volume - 5"
     m:0x0 + c:95
     F11
 
