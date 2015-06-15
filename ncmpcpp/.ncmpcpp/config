@@ -21,7 +21,7 @@ visualizer_fifo_path        = "/tmp/mpd.fifo"
 visualizer_look             = "~~"
 visualizer_output_name      = "My FIFO"
 visualizer_sync_interval    = 30
-visualizer_type             = "wave_filled" (spectrum/wave/wave_filled/ellipse)
+visualizer_type             = "spectrum" (spectrum/wave/wave_filled/ellipse)
 
 
 #-------~---~----------~----------~----
