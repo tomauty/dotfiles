@@ -76,12 +76,12 @@ map q: :q
 "-------~---~----------~----------~----
 syntax enable
 
+
+set background=dark
 let g:gruvbox_termcolors=16
 let g:gruvbox_italic=0
 "let g:gruvbox_contrast_dark="hard"
-
 colorscheme gruvbox
-set background=dark
 
 
 "-------~---~----------~----------~----
@@ -105,7 +105,7 @@ set noshowmode                  " Don't show --INSERT-- in status line
 set number                      " Line numbers in the sidebar
 set scrolloff=5                 " Scroll margin at top or bottom of screen
 set synmaxcol=200
-set regexpengine=1
+"set regexpengine=1
 set timeoutlen=50
 
 set nospell                     " Spell check slows us down
@@ -117,7 +117,7 @@ set tm=500                      " No annoying sound on errors
 set noeb vb t_vb=               " No annoying sound on errors
 
 "set mouse=nicr                  " Enable the mouse
-"set mouse=a                     " Enable the mouse
+set mouse=a                     " Enable the mouse
 
 " Un-highlight shortcut if highlighting is enabled
 nnoremap <silent> <C-l> :nohl<CR><C-l>
@@ -178,7 +178,7 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md set spell
 
 " only run JSHint on file write
-let JSHintUpdateWriteOnly=0
+let JSHintUpdateWriteOnly=1
 
 " Wrap lines in git commit messages
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -190,8 +190,8 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 map <leader>gs :Gstatus<cr>
 map <leader>ge :Gedit<cr>
 map <leader>gc :Gcommit<cr>
-map <leader>gg :Ggrep
-autocmd QuickFixCmdPost *grep* cwindow
+map <leader>gg :Ag<Space>
+"autocmd QuickFixCmdPost *grep* cwindow
 
 
 "-------~---~----------~----------~----
@@ -215,18 +215,30 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 hi Directory ctermfg=blue
 
 "-------~---~----------~----------~----
+" Vim-Test
+"-------~---~----------~----------~----
+
+map <leader>T :Dispatch make test<cr>
+map <leader>C :Dispatch make coverage<cr>
+
+
+"-------~---~----------~----------~----
 " GUI Settings
 "-------~---~----------~----------~----
 if has("gui_running")
-  colorscheme base16-default
-  set noantialias
+  colorscheme hybrid
+  set antialias
   set vb t_vb=
-  set guifont=Terminus\ 10
+  "set guifont=Inconsolata:h14
+  set guifont=Inconsolata\ for\ Powerline:h12
+  "set guifont=Monaco:h10
+  set antialias
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
   set nospell
+  set linespace=1
   set noerrorbells                " No annoying sound on errors
   set novisualbell                " No annoying sound on errors
   set t_vb=                       " No annoying sound on errors
@@ -234,7 +246,6 @@ if has("gui_running")
   set noeb vb t_vb=               " No annoying sound on errors
 endif
 set vb t_vb=
-set guifont=Terminus\ 10
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
@@ -256,9 +267,9 @@ endif
 
 " symbols
 let g:airline_left_sep = '>'
-let g:airline_left_alt_sep = '>'
+let g:airline_left_alt_sep = ''
 let g:airline_right_sep = '>'
-let g:airline_right_alt_sep = '>'
+let g:airline_right_alt_sep = ''
 
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'

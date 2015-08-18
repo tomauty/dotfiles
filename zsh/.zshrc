@@ -1,4 +1,5 @@
 # Source Prezto.
+export ZDOTDIR=$HOME
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -28,9 +29,22 @@ export PATH=$PATH:$HOME/.config/bspwm
 export PATH=$PATH:$HOME/code/colors
 export PATH=$PATH:$HOME/code/util
 export PATH=$PATH:$HOME/.config/bspwm/panel
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+export PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin
+export PATH=$PATH:/usr/texbin
+
+# Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
+
+
+alias ghostscript="gs"
+
 
 # ls
-alias ls='ls --color -a -h -o -l -G'
+alias ls='ls -a -h -o -l -G'
 alias cls='clear ; ls'
 export LS_COLORS='di=34:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 
@@ -46,6 +60,9 @@ alias gg='git grep'
 alias gs='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
+
+# df
+alias fort="/Applications/Macnewbie/Dwarf\ Fortress/dfhack"
 
 
 # mpd / sound
@@ -90,12 +107,16 @@ orphans() {
 
 # work-related
 alias nrs='npm run supervise'
+alias gw='gulp watch'
 alias w='cd ~/Work/app'
-alias lines="cloc --exclude-dir=node_modules,bower_components,dist,static2 --quiet --unix --skip-uniqueness "
+alias lines="cloc --exclude-dir=node_modules,__tests__,bower_components,dist,static2 --quiet --unix --skip-uniqueness "
 
 # tmux
 alias kt='killall tmux'
 if [[ $TERM =~ rxvt-unicode-256color ]]; then
+  exec tmux -2
+fi
+if [[ $TERM =~ xterm-256color ]]; then
   exec tmux -2
 fi
 
@@ -123,8 +144,8 @@ else
 fi
 
 # (n/r)vm
-source ~/.nvm/nvm.sh
-source ~/.rvm/scripts/rvm
+#source ~/.nvm/nvm.sh
+#source ~/.rvm/scripts/rvm
 
 # colored man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking

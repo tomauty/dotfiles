@@ -8,26 +8,29 @@ Bundle 'gmarik/Vundle.vim'
 "-------~---~----------~----------~----
 " Color Schemes
 "-------~---~----------~----------~----
-"Bundle 'TaurusOlson/creature.vim'
-"Bundle 'YorickPeterse/Autumn.vim'
-"Bundle 'abra/vim-abra'
-"Bundle 'adlawson/vim-sorcerer'
+Bundle 'YorickPeterse/Autumn.vim'
+Bundle 'abra/vim-abra'
+Bundle 'gregsexton/Gravity'
+Bundle 'junegunn/seoul256.vim'
+Bundle 'mopp/mopkai.vim'
+Bundle 'oguzbilgic/sexy-railscasts-theme'
+Bundle 'romainl/Apprentice'
+Bundle 'vim-scripts/Gentooish'
+Bundle 'TaurusOlson/creature.vim'
+Bundle 'adlawson/vim-sorcerer'
 Bundle 'chriskempson/base16-vim'
-"Bundle 'djjcast/mirodark'
-"Bundle 'duythinht/vim-coffee'
-"Bundle 'gregsexton/Gravity'
-"Bundle 'junegunn/seoul256.vim'
-"Bundle 'mopp/mopkai.vim'
+Bundle 'djjcast/mirodark'
+Bundle 'duythinht/vim-coffee'
 Bundle 'morhetz/gruvbox'
-"Bundle 'nanotech/jellybeans.vim'
-"Bundle 'oguzbilgic/sexy-railscasts-theme'
-"Bundle 'orthecreedence/void.vim'
-"Bundle 'romainl/Apprentice'
-"Bundle 'sjl/badwolf'
-"Bundle 'vim-scripts/Gentooish'
-"Bundle 'vim-scripts/ScrollColors'
-"Bundle 'vim-scripts/vilight.vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'orthecreedence/void.vim'
+Bundle 'sjl/badwolf'
+Bundle 'vim-scripts/ScrollColors'
+Bundle 'vim-scripts/vilight.vim'
 Bundle 'w0ng/vim-hybrid'
+Bundle 'vyshane/vydark-vim-color'
+Bundle 'CruizeMissile/Revolution.vim'
+Bundle 'ajh17/Spacegray.vim'
 
 "-------~---~----------~----------~----
 " Language-Agnostic
@@ -38,10 +41,9 @@ Bundle 'scrooloose/syntastic'
 " WebDev
 "-------~---~----------~----------~----
 Bundle 'tpope/vim-markdown'
-Bundle 'groenewege/vim-less'
 " fork removing compiler things
 Bundle 'strogonoff/vim-coffee-script'
-Bundle "pangloss/vim-javascript"
+Bundle "othree/yajs.vim"
 
 "-------~---~----------~----------~----
 " Python
@@ -52,17 +54,22 @@ Bundle 'davidhalter/jedi-vim'
 " Git
 "-------~---~----------~----------~----
 Bundle 'tpope/vim-fugitive'
-"Bundle 'airblade/vim-gitgutter'
+Bundle 'airblade/vim-gitgutter'
 
 "-------~---~----------~----------~----
 " Editing / Movements / Misc
 "-------~---~----------~----------~----
-Bundle 'tpope/vim-surround'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'bling/vim-airline'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'gregsexton/MatchTag'
+Bundle 'kien/ctrlp.vim'
+Bundle 'rking/ag.vim'
+Bundle 'rstacruz/sparkup'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'gregsexton/MatchTag'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-surround'
 Bundle 'wookiehangover/jshint.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
-Bundle 'Valloric/YouCompleteMe'
