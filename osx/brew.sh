@@ -8,7 +8,14 @@ binaries=(
   cmake
   coreutils
   cscope
+	czmq
   ctags
+	erlang
+	elixir
+	fontconfig
+	fontforge
+	freetype
+	gdb
   gdbm
   gettext
   ghi
@@ -16,8 +23,11 @@ binaries=(
   git
   glib
   graphicsmagick
+	harfbuzz
   htop-osx
+	httpie
   hub
+	icu4c
   imagemagick
   jpeg
   libevent
