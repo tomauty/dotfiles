@@ -81,7 +81,7 @@ set background=dark
 let g:gruvbox_termcolors=16
 let g:gruvbox_italic=0
 "let g:gruvbox_contrast_dark="hard"
-colorscheme gruvbox
+colorscheme base16-default
 
 
 "-------~---~----------~----------~----
@@ -127,7 +127,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Tabs / Buffers / Lines
 "-------~---~----------~----------~----
 
-set expandtab       " Use spaces instead of tabs
+"set expandtab       " Use spaces instead of tabs
 set smarttab        " Be smart when using tabs
 set shiftwidth=2    " 2-space tabs
 set softtabstop=2   " 2-space tabs
@@ -261,22 +261,23 @@ set noeb vb t_vb=               " No annoying sound on errors
 "-------~---~----------~----------~----
 " Airline
 "-------~---~----------~----------~----
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
+"if !exists('g:airline_symbols')
+  "let g:airline_symbols = {}
+"endif
 
 " symbols
-let g:airline_left_sep = '>'
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = '>'
-let g:airline_right_alt_sep = ''
+"let g:airline_left_sep = '>'
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = '>'
+"let g:airline_right_alt_sep = ''
 
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.whitespace = 'Ξ'
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = ''
 
 let g:airline_theme="base16"
+let g:airline_powerline_fonts = 1
 

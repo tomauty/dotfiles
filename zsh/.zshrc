@@ -32,6 +32,8 @@ export PATH=$PATH:$HOME/.config/bspwm/panel
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin
 export PATH=$PATH:/usr/texbin
+#export PATH="$PATH:/path/to/elixir/bin"
+
 
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
@@ -54,9 +56,11 @@ alias m="mutt"
 
 
 # git
+alias w='cd ~/MoneyLion/lionloansangularjs'
 alias gap='git add -p'
 alias gb='git branch'
 alias gg='git grep'
+alias gc='git checkout'
 alias gs='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -106,10 +110,7 @@ orphans() {
 
 
 # work-related
-alias nrs='npm run supervise'
-alias gw='gulp watch'
-alias w='cd ~/Work/app'
-alias lines="cloc --exclude-dir=node_modules,__tests__,bower_components,dist,static2 --quiet --unix --skip-uniqueness "
+alias lines="cloc --exclude-dir=node_modules,__tests__,bower_components,dist,static2,docs --quiet --unix --skip-uniqueness "
 
 # tmux
 alias kt='killall tmux'
@@ -144,7 +145,7 @@ else
 fi
 
 # (n/r)vm
-#source ~/.nvm/nvm.sh
+source ~/.nvm/nvm.sh
 #source ~/.rvm/scripts/rvm
 
 # colored man pages
@@ -162,3 +163,4 @@ export PATH=${PATH}:/usr/lib/jvm/default/bin
 unalias rm >/dev/null 2>/dev/null
 KEYTIMEOUT=1
 export ANDROID_HOME=/opt/android-sdk
+

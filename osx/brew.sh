@@ -3,7 +3,6 @@ binaries=(
   autoconf
   automake
   boost
-  brew-cask
   cairo
   cloc
   cmake
@@ -29,11 +28,9 @@ binaries=(
   libtool
   libyaml
   little-cms2
-  macvim
   mutt
   ncmpcpp
   openssl
-  osxfuse
   pixman
   pkg-config
   qt

@@ -43,12 +43,15 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-markdown'
 " fork removing compiler things
 Bundle 'strogonoff/vim-coffee-script'
+Bundle 'digitaltoad/vim-jade'
 Bundle "othree/yajs.vim"
 
 "-------~---~----------~----------~----
 " Python
 "-------~---~----------~----------~----
 Bundle 'davidhalter/jedi-vim'
+
+Bundle 'elixir-lang/vim-elixir'
 
 "-------~---~----------~----------~----
 " Git
@@ -73,3 +76,4 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-surround'
 Bundle 'wookiehangover/jshint.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
