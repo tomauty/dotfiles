@@ -81,7 +81,7 @@ set background=dark
 let g:gruvbox_termcolors=16
 let g:gruvbox_italic=0
 "let g:gruvbox_contrast_dark="hard"
-colorscheme base16-default
+colorscheme gruvbox
 
 
 "-------~---~----------~----------~----
