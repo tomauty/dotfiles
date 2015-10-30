@@ -45,6 +45,8 @@ hi link coffeeReservedError NONE
 
 set nocompatible            " Disable Vi-Mode compatibility
 
+set shell=/bin/zsh
+
 let mapleader = ","         " Leader ,
 let g:mapleader = ","       " Leader ,
 
@@ -95,7 +97,9 @@ set smartcase                   " Case sensitive if capitals in search
 set incsearch                   " Incremental searching
 set laststatus=2                " Always show status line
 set list                        " Show trailing whitespace
-set listchars=tab:▸\ ,trail:▫   " Show trailing whitespace
+"set lcs=tab:▒░,trail:▓
+"set listchars=tab:\ \ ,...
+set listchars=tab:\ \ ,trail:·,eol:\ ,nbsp:_
 set cursorline                  " Background color on current cursor line
 set lazyredraw                  " Don't redraw while executing macros
 set ttyfast
@@ -127,7 +131,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Tabs / Buffers / Lines
 "-------~---~----------~----------~----
 
-"set expandtab       " Use spaces instead of tabs
+set noexpandtab       " Use spaces instead of tabs
 set smarttab        " Be smart when using tabs
 set shiftwidth=2    " 2-space tabs
 set softtabstop=2   " 2-space tabs
@@ -226,12 +230,10 @@ map <leader>C :Dispatch make coverage<cr>
 " GUI Settings
 "-------~---~----------~----------~----
 if has("gui_running")
-  colorscheme hybrid
+	colorscheme hybrid
   set antialias
   set vb t_vb=
-  "set guifont=Inconsolata:h14
-  set guifont=Inconsolata\ for\ Powerline:h12
-  "set guifont=Monaco:h10
+  set guifont=Inconsolata\ for\ Powerline:h14
   set antialias
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
@@ -280,4 +282,15 @@ set noeb vb t_vb=               " No annoying sound on errors
 
 let g:airline_theme="base16"
 let g:airline_powerline_fonts = 1
+
+
+function! HasConfig(file, dir)
+    return findfile(a:file, escape(a:dir, ' ') . ';') !=# ''
+endfunction
+
+autocmd BufNewFile,BufReadPre *.js  let b:syntastic_checkers =
+    \ HasConfig('.eslintrc', expand('<amatch>:h')) ? ['eslint'] :
+    \ HasConfig('.jshintrc', expand('<amatch>:h')) ? ['jshint'] :
+    \     ['standard']
+
 
