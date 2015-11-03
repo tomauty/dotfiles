@@ -25,14 +25,9 @@ fi
 # Path entries
 export PATH=$PATH:/usr/local:/usr/lib
 export PATH=$PATH:$HOME/.rvm/bin
-export PATH=$PATH:$HOME/.config/bspwm
 export PATH=$PATH:$HOME/code/colors
 export PATH=$PATH:$HOME/code/util
-export PATH=$PATH:$HOME/.config/bspwm/panel
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin
-export PATH=$PATH:/usr/texbin
-#export PATH="$PATH:/path/to/elixir/bin"
 
 
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
@@ -157,10 +152,17 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
+export SLACK_API_TOKEN="xoxb-12780441543-1pyTLDix3ZiUJ44G0b6B1E53"
+
 export PYTHON=python2.7
 
-export PATH=${PATH}:/usr/lib/jvm/default/bin
+#export PATH=${PATH}:/usr/lib/jvm/default/bin
 unalias rm >/dev/null 2>/dev/null
 KEYTIMEOUT=1
 export ANDROID_HOME=/opt/android-sdk
 
+alias droplet="ssh tom@104.131.231.245"
+unalias scp
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+unalias rsync
