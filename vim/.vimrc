@@ -42,6 +42,13 @@ inoremap kj <Esc>
 " Stop command line window
 map q: :q
 
+" Tab navigation like Firefox.
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
 
 "-------~---~----------~----------~----
 " NERDTree
@@ -65,7 +72,7 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 "-------~---~----------~----------~----
 " Ctrl-P
 "-------~---~----------~----------~----
-let g:ctrlp_by_filename=1
+let g:ctrlp_by_filename=0
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:5,results:5'
 let g:ctrlp_show_hidden = 1
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
@@ -78,8 +85,7 @@ let g:ctrlp_mruf_relative = 1
 " Colors
 "-------~---~----------~----------~----
 set background=dark
-colorscheme tropikos
-
+colorscheme base16-twilight
 
 "-------~---~----------~----------~----
 " GUI Settings
@@ -89,7 +95,9 @@ if has("gui_running")
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
-  set guifont=Hack:h14
+  set guioptions-=e
+  set guifont=Droid\ Sans\ Mono:h14
+	set linespace=5
 endif
 
 set cursorline
@@ -97,6 +105,7 @@ set incsearch
 set ignorecase
 set smartcase
 set nohlsearch
+set number
 
 set noexpandtab     " Use tabs
 set smarttab        " Be smart when using tabs
@@ -126,6 +135,9 @@ function! SetupEnvironment()
   if l:path =~ '/Users/tom/MoneyLion'
     setlocal tabstop=2 shiftwidth=2 noexpandtab
   endif
+  if l:path =~ '/Users/tom/MoneyLion/mlsocialapi'
+    setlocal tabstop=2 shiftwidth=2 expandtab
+  endif
   " iOS app uses react in all JS files
   if l:path =~ '/Users/tom/MoneyLion/MoneyLion'
     " TODO: figure out how to conditionally allow jsx project-wide
@@ -140,14 +152,14 @@ let g:jsx_ext_required = 0
 " Convenient Functions
 "-------~---~----------~----------~----
 autocmd BufWritePre * :%s/\s\+$//e      " Remove whitespace on save
-
+autocmd QuickFixCmdPost *grep* cwindow  " Auto quickfix from grep
 
 "-------~---~----------~----------~----
 " Airline
 "-------~---~----------~----------~----
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='luna'
+let g:airline_theme='hybrid'
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#show_message = 1
 
@@ -164,6 +176,9 @@ let g:syntastic_style_error_symbol = '✠✠'
 let g:syntastic_warning_symbol = '∆∆'
 let g:syntastic_style_warning_symbol = '≈≈'
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_html_tidy_ignore_errors = [ 'proprietary attribute', 'trimming empty' ]
+
 
 
 

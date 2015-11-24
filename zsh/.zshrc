@@ -1,9 +1,3 @@
-# Source Prezto.
-export ZDOTDIR=$HOME
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # Environment variables
 export EDITOR='vim'
 export VISUAL='vim'
@@ -36,19 +30,12 @@ if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
-
 alias ghostscript="gs"
-
 
 # ls
 alias ls='ls -a -h -o -l -G'
 alias cls='clear ; ls'
 export LS_COLORS='di=34:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
-
-# mail
-alias mb="mbsync -a"
-alias m="mutt"
-
 
 # git
 alias w='cd ~/MoneyLion/lionloansangularjs'
@@ -135,8 +122,6 @@ heading () {
 # private aliases
 if [ -f ~/.zshrc.private ]; then
     source ~/.zshrc.private
-else
-  print "Skipped private aliases"
 fi
 
 # (n/r)vm
@@ -162,7 +147,7 @@ KEYTIMEOUT=1
 export ANDROID_HOME=/opt/android-sdk
 
 alias droplet="ssh tom@104.131.231.245"
-unalias scp
+unalias scp >/dev/null 2>/dev/null
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-unalias rsync
+unalias rsync >/dev/null 2>/dev/null
