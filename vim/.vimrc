@@ -85,7 +85,7 @@ let g:ctrlp_mruf_relative = 1
 " Colors
 "-------~---~----------~----------~----
 set background=dark
-colorscheme hybrid_reverse
+colorscheme gruvbox
 
 "-------~---~----------~----------~----
 " GUI Settings
