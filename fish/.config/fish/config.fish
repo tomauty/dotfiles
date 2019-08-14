@@ -1,5 +1,3 @@
-set -gx LSCOLORS gxfxcxdxbxegedabagacad
-
 alias clock="tty-clock -Srx -C4"
 alias g="git"
 alias gs="git status"
@@ -69,9 +67,9 @@ set -g theme_display_virtualenv no  # Disables displaying the current virtualenv
 
 
 # Show fun w1z@rd
-#if status is-interactive
-#    cat ~/Documents/wizard2.txt
-#end
+if status is-interactive
+    cat ~/Documents/wizard2.txt
+end
 
 rvm default
 

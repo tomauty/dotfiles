@@ -117,8 +117,8 @@ set nobackup
 set noswapfile
 
 set hidden
-nnoremap <C-]> :bnext<CR>
-"nnoremap <C-[> :bprev<CR>
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-B> :bprev<CR>
 nnoremap <C-X> :bd<CR>
 let g:airline#extensions#tabline#enabled = 1
 
