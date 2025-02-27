@@ -8,5 +8,4 @@
         create: true
     ~/.tmux.conf: tmux.conf
     ~/.zprofile: zprofile
-
-
+    ~/.config/fish: fish
