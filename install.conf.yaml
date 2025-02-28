@@ -1,4 +1,8 @@
-- clean: ['~']
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
 
 - brewfile:
     - brew/Brewfile
