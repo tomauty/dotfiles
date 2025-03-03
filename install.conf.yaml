@@ -13,11 +13,25 @@
 - brewfile:
     - brew/Brewfile
 
+- shell:
+    - [mkdir -p ~/.config/iterm2/colors, Creating iTerm2 colors dir]
+
 - link:
+    # Basic dotfiles
     ~/.profile: profile
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.config/fish: fish
+    ~/.config/nvim: nvim
+
+    # Everforest iTerm themes
+    ~/.config/iterm2/colors/everforest_dark_low.itermcolors: colors/everforest/themes/everforest_dark_low.itermcolors
+    ~/.config/iterm2/colors/everforest_dark_medium.itermcolors: colors/everforest/themes/everforest_dark_medium.itermcolors
+    ~/.config/iterm2/colors/everforest_dark_hard.itermcolors: colors/everforest/themes/everforest_dark_hard.itermcolors
+    ~/.config/iterm2/colors/everforest_light_low.itermcolors: colors/everforest/themes/everforest_light_low.itermcolors
+    ~/.config/iterm2/colors/everforest_light_medium.itermcolors: colors/everforest/themes/everforest_light_medium.itermcolors
+    ~/.config/iterm2/colors/everforest_light_hard.itermcolors: colors/everforest/themes/everforest_light_hard.itermcolors
+   
 
 - shell:
     - [sh scripts/macos.sh, Running setup script]
