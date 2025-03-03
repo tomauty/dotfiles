@@ -7,6 +7,6 @@
 [user]
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZWaYcTGacmcNVCFLCilwP6vxcBFqf2qZXIEvtOoJr8
 	name = Tom Auty
-	email = tom@truex.co
+	email = tom.auty@gmail.com
 [pull]
 	rebase = true

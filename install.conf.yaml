@@ -10,9 +10,8 @@
 - link:
     ~/.profile: profile
     ~/.gitconfig: gitconfig
-    ~/.ssh/config:
-        path: ssh/config
-        create: true
     ~/.tmux.conf: tmux.conf
-    ~/.zprofile: zprofile
     ~/.config/fish: fish
+
+- shell:
+    - [sh scripts/macos.sh, Running setup script]
