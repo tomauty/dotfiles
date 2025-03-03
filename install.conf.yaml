@@ -4,6 +4,12 @@
     ~/.config:
       recursive: true
 
+- shell:
+    - command: git submodule update --init --recursive
+      description: Initializing Git submodules
+    - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+      description: Installing TPM
+
 - brewfile:
     - brew/Brewfile
 

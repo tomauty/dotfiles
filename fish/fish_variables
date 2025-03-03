@@ -5,10 +5,11 @@ SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fish
 SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro
 SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR _hydro_git_11263:dotbot\u2022\x20
 SETUVAR _hydro_git_16988:tom\x2deng\x2d202\x2dwebsocket\x2dfeed\x2dfor\x2dlive\x2dticker\x2ddata\x20
 SETUVAR _hydro_git_2363:tom\x2deng\x2d132\x2dsparklines\x20
 SETUVAR _hydro_git_3333:dotbot\u2022\x20
-SETUVAR _hydro_git_3930:dotbot\u2022\x20\u21912\x20
+SETUVAR _hydro_git_9301:dotbot\u2022\x20
 SETUVAR _hydro_git_99188:develop\u2022\x20
 SETUVAR _hydro_git_99210:tom\x2deng\x2d132\x2dsparklines\x20
 SETUVAR fish_color_autosuggestion:brblack
